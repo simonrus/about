@@ -18,7 +18,7 @@ menu:
 social:
 - {icon: 'twitter', link: 'https://twitter.com/lostsimon'}
 - {icon: 'instagram', link: 'https://www.instagram.com/sergeysimon'}
-- {icon: 'linked', link: 'https://www.linkedin.com/in/sergeysemenov'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/sergeysemenov'}
 
 # Customize site text
 pagination:
