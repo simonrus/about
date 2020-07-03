@@ -14,7 +14,7 @@ sass:
   style: :nested
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           "how deep is rabbit hole?"
+title:		           "How deep is rabbit hole?"
 description:	       "Blog about Signal processing, Probability theory, Error-correcting code and Machine Learning"
 author:                "Sergei Semenov"
 
