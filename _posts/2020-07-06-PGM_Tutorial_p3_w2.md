@@ -3,7 +3,7 @@ layout: post
 title: "PGM (p3.week2)"
 author: "Sergei Semenov"
 categories: life
-image: 07-2020-PGM_Logo.jpg
+image: 2020-07-PGM_Logo.jpg
 ---
 
 # Number of parameters as CPD model
@@ -18,14 +18,16 @@ $$
 
 What is the total number of parameters in our model?
 
-$$card(F1) = 26$$
-$$card(F2) = 26$$
-$$card(F3) = 26$$
-$$card(F4) = 26 * 32$$
-$$card(F5) = 26 * 32$$
-$$card(F6) = 26 * 32$$
-$$card(F7) = 26 * 26$$
-$$card(F8) = 26 * 26$$
+$$
+card(F1) = 26 \\
+card(F2) = 26 \\
+card(F3) = 26 \\
+card(F4) = 26 * 32 \\
+card(F5) = 26 * 32 \\
+card(F6) = 26 * 32 \\
+card(F7) = 26 * 26 \\
+card(F8) = 26 * 26 \\
+$$
 
 $$card(F) = 3 * 26 + 3 * 26 * 32 + 2 * 26 * 26 = 3926$$
 
