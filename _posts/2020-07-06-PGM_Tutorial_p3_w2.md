@@ -60,5 +60,5 @@ So, to evaluate parameters we will use the following model
 ![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing2.inkspace.svg "Graph")
 
 What is the total number of parameters in traing model?
-$$card(F_train) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
+$$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
 
