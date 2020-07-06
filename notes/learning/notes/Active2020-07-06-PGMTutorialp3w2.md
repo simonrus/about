@@ -10,7 +10,7 @@ modified: '2020-07-06T10:11:16.680Z'
 layout: post
 title: "PGM (p3.week2)"
 author: "Sergei Semenov"
-categories: learing
+categories: learning
 image: 2020-07-PGM_Logo.jpg
 ---
 # Tutorial: CRF Learning for OCR
