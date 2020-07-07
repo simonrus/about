@@ -1,3 +1,4 @@
+# Active_2020-07-06-PGM_Tutorial_p3_w2
 ---
 layout: post
 title: "PGM (p3.week2)"
@@ -13,11 +14,11 @@ The goal of task is to train the model for Optical character recognition for 3 l
 # Basic CRF Model
 
 We have input (observed variable) images $$I$$ or $$X$$ which consists of 32 white/black pixels (denoted as $$x_{i,j}$$)
-We have output (single charachters / hidden states) chars $$C$$ or $$Y$$ (26 letters)
+We have output (single characters / hidden states) chars $$C$$ or $$Y$$ (26 letters)
 
 We will train a OCR model that have
-* singleton factors for observed images $$\widetilde{P}(C_{i} \mid I)$$ that defines OCR model for single character $$i$$
-* singleton factors for charachers $$P(C)$$ describes letter probability in the English language
+* singleton factors for observed images $$\wide tilde{P}(C_{i} \mid I)$$ that defines OCR model for single character $$i$$
+* singleton factors for characters $$P(C)$$ describes letter probability in the English language
 * pairwise factors $$P(C_{i}, C_{i+1})$$ describes pairwise letters probability 
 
 
@@ -46,7 +47,7 @@ $$
 
 $$card(F) = 3 * 26 + 3 * 26 * 32 + 2 * 26 * 26 = 3926$$
 
-Oops, that's too much. Lets try to reduce total ammount of parameters by using shared params
+Oops, that's too much. Lets try to reduce total amount of parameters by using shared parameters
 But first of all, lets move to the model with log-linear features
 
 # Model with Log-linear features
@@ -60,7 +61,7 @@ Every feature is binary and takes 0 or 1 value (presented or not).
 
 The number of required features is also 3926
 
-## Declare shared params
+## Declare shared parameters
 
 What we can simplify? 
 * let's assume that letter probability doesn't depend on position. In this case factors $$F1,F2,F3$$ will have the same parameters and we can estimate them together $$F_{123}$$
@@ -78,4 +79,5 @@ For $$F_{123}$$ factor we use function *ComputeUnconditionedSingletonFeatures()*
 
 For $$F_{78}$$ factor the function *ComputeUnconditionedPairFeatures()* is used. It returns __2\*26\*26=1352 features and 26\*26 = 676 shared parameters__
 
-The total number of shared parameterts is $$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
+The total number of shared parameters is $$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
+
