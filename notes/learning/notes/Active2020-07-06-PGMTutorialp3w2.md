@@ -2,7 +2,7 @@
 tags: [learning]
 title: Active2020-07-06-PGMTutorialp3w2
 created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-06T10:11:16.680Z'
+modified: '2020-07-07T13:30:48.359Z'
 ---
 
 # Active_2020-07-06-PGM_Tutorial_p3_w2
@@ -59,14 +59,20 @@ Oops, that's too much. Lets try to reduce total ammount of parameters by using s
 ## Declare shared params
 
 What we can simplify? 
-* let's assume that letter probability doesn't depend on position. In this case factors $$F1,F2,F3$$ will have the same parameters
-* let's assume that pairwise letter probability doesn't depend on position.  $$F7,F8$$ 
-* I would offer to use the same OCR model for single character. But for some reason, Daphna doesn't do it (TBD)
+* let's assume that letter probability doesn't depend on position. In this case factors $$F1,F2,F3$$ will have the same parameters and we can estimate them together $$F_{123}$$
+* let's assume that pairwise letter probability doesn't depend on position. In this case, $$F7 = F8$$ and use $$F_{78}$$ instead
+* We would use the same OCR model for single character $$F4 = F5 = F6$$. We will declare it as $$F_{456}$$ 
 
-So, to evaluate parameters we will use the following model
-
+So, to evaluate parameters we will use the following model  
 ![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing2.inkspace.svg "Graph")
 
-What is the total number of parameters in traing model?
+## What is about features?
+Instead of factors we would use features. Features are defined and calculated
+
+* For $$F_{123}$$ factor in function __ComputeUnconditionedSingletonFeatures()__ returns 3*26 features   
+* For $$F_{456}$$ factor in function __ComputeConditionedSingletonFeatures()__.Total features in this factor is 2 * 26 * 32. We have 2 features per pixel (for white and black pixel)
+* For $$F_{78}$$ factor in function __ComputeUnconditionedPairFeatures()__ returns 2 * 26 * 26 features (TBD)
+
+
 $$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
 
