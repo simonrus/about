@@ -2,7 +2,7 @@
 tags: [learning]
 title: Active2020-07-06-PGMTutorialp3w2
 created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-07T13:30:48.359Z'
+modified: '2020-07-07T14:18:52.740Z'
 ---
 
 # Active_2020-07-06-PGM_Tutorial_p3_w2
@@ -73,6 +73,6 @@ Instead of factors we would use features. Features are defined and calculated
 * For $$F_{456}$$ factor in function __ComputeConditionedSingletonFeatures()__.Total features in this factor is 2 * 26 * 32. We have 2 features per pixel (for white and black pixel)
 * For $$F_{78}$$ factor in function __ComputeUnconditionedPairFeatures()__ returns 2 * 26 * 26 features (TBD)
 
-
+The total number of features is:
 $$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
 
