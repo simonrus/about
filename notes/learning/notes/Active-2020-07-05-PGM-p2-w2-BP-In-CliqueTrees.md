@@ -1,7 +1,7 @@
 ---
 title: Active-2020-07-05-PGM-p2-w2-BP-In-CliqueTrees
 created: '2020-07-09T12:04:10.924Z'
-modified: '2020-07-09T14:32:35.488Z'
+modified: '2020-07-09T19:42:24.281Z'
 ---
 
 # Active-2020-07-05-PGM-p2-w2-BP-In-CliqueTrees
@@ -38,7 +38,7 @@ A: yes, we need to apply proper scheduling for messages (start from leaves)
 ## Q: other benefits?
 A: yes, it can simplify computations using evidence. How? Run BP. Take any cluster, that has required variables and do marginalization. The output will be unnormalized measurements
 
-If we have a new evidence Z, find a cluster that has variables from Z and do computations only in this cluster. Calculate the $$P_{\psi}(X \mid Z) = \frac {\widetilde{P}_{\psi}(X, Z)}{\widetilde{P}_{\psi}(X)} = \frac {\widetilde{P}_{\psi}(X, Z)}{\sum_{Z}\widetilde{P}_{\psi}(X \mid Z)}$$ 
+If we have a new evidence Z, find a cluster that has variables from Z and do computations only in this cluster. Calculate the $$P_{\psi}(X \mid Z) = \frac {\widetilde{P}_{\psi}(X, Z)}{\widetilde{P}_{\psi}(X)} = \frac {\widetilde{P}_{\psi}(X, Z)}{\sum_{Z}\widetilde{P}_{\psi}(X \mid Z)}$$*REALLY? NOTE: CHECKME, Sergei!!!*
 
 Reference: [Answering quieries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
 
