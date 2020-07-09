@@ -36,7 +36,7 @@ Reference: [Answering quieries](https://www.coursera.org/learn/probabilistic-gra
 
 If there is no cluster, that contains Z and X together, we need to find cluster with Z and propagate messages along path to clique, containing Z
 
-If we have caching, it can be cheap, because we can recalculates only messages that are along the path
+If we have caching, it can be cheap, because we can recalculate only messages that are along the path
 
 Reference: [And more quieries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
 
