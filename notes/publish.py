@@ -50,13 +50,14 @@ for root,d_names,f_names in os.walk(path):
         
         for post_fn in f_names:
             ## Find all with name Active...dd
+            print(root, post_fn, f_names)
             if ((post_fn.startswith(magic_prefix)) and (".bak" not in post_fn)):
                 #print (root, post_fn)
                 new_filename = post_fn[len(magic_prefix):]
                 src = os.path.join(root, post_fn)
-                dest = os.path.join(dest, new_filename)
-                #print (root, category, src, "->", dest)
-                processFile(src, dest)
+                dest_filename = os.path.join(dest, new_filename)
+                print (root, category, src, "->", dest_filename)
+                processFile(src, dest_filename)
                 ## Copy file with new name without Active prefix
 
                 
