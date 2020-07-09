@@ -1,4 +1,3 @@
-# Active_2020-07-06-PGM_Tutorial_p3_w2
 ---
 layout: post
 title: "PGM (p3.week2)"
