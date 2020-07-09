@@ -1,7 +1,7 @@
 ---
 title: Active-2020-07-05-PGM-p2-w2-BP-In-CliqueTrees
 created: '2020-07-09T12:04:10.924Z'
-modified: '2020-07-09T14:17:11.392Z'
+modified: '2020-07-09T14:32:35.488Z'
 ---
 
 # Active-2020-07-05-PGM-p2-w2-BP-In-CliqueTrees
@@ -17,9 +17,10 @@ image: 2020-07-PGM_Logo.jpg
 
 # BP recall: Calibration property 
 
-Reference: [Properties of Belief Propagation] (https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/xm2ul/properties-of-belief-propagation)
+Reference: [Properties of Belief Propagation](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/xm2ul/properties-of-belief-propagation)
 
 When BP is running, the messages are transferred from one Cluster to another. With new message, every Cluster updates it's belief 
+
 $$\beta_{i}\left(\boldsymbol{C}_{i}\right)=\psi_{i} \times \prod_{k \in \mathcal{N}_{i}} \delta_{k \rightarrow i}$$
 
 There is a theorem, that convergence leads to calibration:
