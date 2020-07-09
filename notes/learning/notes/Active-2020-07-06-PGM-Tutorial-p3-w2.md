@@ -1,11 +1,11 @@
 ---
 tags: [learning]
-title: Active2020-07-06-PGMTutorialp3w2
+title: Active-2020-07-06-PGM-Tutorial-p3-w2
 created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-07T15:31:24.915Z'
+modified: '2020-07-09T11:34:17.974Z'
 ---
 
-# Active_2020-07-06-PGM_Tutorial_p3_w2
+# Active-2020-07-06-PGM-Tutorial-p3-w2
 ---
 layout: post
 title: "PGM (p3.week2)"
