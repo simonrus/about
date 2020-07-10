@@ -18,7 +18,7 @@ Here I would like to write some useful tips, that helped me to deeply understand
 
 The goal of task is to train the model for Optical character recognition for 3 letter words
 
-# Model descripion
+# Model description
 
 We have input (observed variable) images $$I$$ or $$X$$ which consists of 32 white/black pixels (denoted as $$x_{i,j}$$)
 We have output (single characters / hidden states) chars $$C$$ or $$Y$$ (26 letters)
@@ -38,7 +38,7 @@ $$
 ![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing1.inkscape.svg "Graph"){:height="50%" width="50%"}
 
 ### CPD Model: Number of parameters 
-Let cound number of parameters when we use CPD model
+Let count number of parameters when we use CPD model
 
 What is the total number of parameters in our model?
 
@@ -106,7 +106,7 @@ The complexity of BP would be extremely huge since we were needed to calculate $
 all possible $$X_n$$ or some prior distribution
 
 
-So, the trick here is to use conditional distrubution
+So, the trick here is to use conditional distribution
 ![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing4.inkscape.svg "Graph"){:height="50%" width="50%"}
 
 In this case, Clique tree would contain only 2 cliques

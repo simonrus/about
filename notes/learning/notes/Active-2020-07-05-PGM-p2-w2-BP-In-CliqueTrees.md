@@ -40,13 +40,13 @@ A: yes, it can simplify computations using evidence. How? Run BP. Take any clust
 
 If we have a new evidence Z, find a cluster that has variables from Z and do computations only in this cluster. Calculate the $$P_{\psi}(X \mid Z) = \frac {\widetilde{P}_{\psi}(X, Z)}{\widetilde{P}_{\psi}(X)} = \frac {\widetilde{P}_{\psi}(X, Z)}{\sum_{Z}\widetilde{P}_{\psi}(X \mid Z)}$$*REALLY? NOTE: CHECKME, Sergei!!!*
 
-Reference: [Answering quieries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
+Reference: [Answering queries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
 
 If there is no cluster, that contains Z and X together, we need to find cluster with Z and propagate messages along path to clique, containing Z
 
 If we have caching, it can be cheap, because we can recalculate only messages that are along the path
 
-Reference: [And more quieries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
+Reference: [And more queries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
 
 *Cool, isn't it?*
 
