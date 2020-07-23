@@ -1,14 +1,6 @@
 ---
-tags: [learning]
-title: Active-2020-07-06-PGM-Tutorial-p3-w2
-created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-23T20:12:13.935Z'
----
-
-# Active-2020-07-06-PGM-Tutorial-p3-w2
----
 layout: post
-title: "Tutorial: CRF Learning for OCR (PGM p3.week2)"
+title: "Tutorial: CRF Learning for OCR (PGM p3.week2) - part2"
 author: "Sergei Semenov"
 categories: learning
 image: 2020-07-PGM_OCR_Learning.jpg
@@ -111,7 +103,7 @@ So, the trick here is to use conditional distribution
 
 In this case, Clique tree would contain only 2 cliques
 
-Now let's go to [part 2](https://simonrus.github.io/about/learning/2020-07-23-PGM-Tutorial-p3-w2_part2.html)
+[TBD]
 
 
 

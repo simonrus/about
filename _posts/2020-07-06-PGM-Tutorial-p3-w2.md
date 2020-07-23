@@ -3,7 +3,7 @@ layout: post
 title: "Tutorial: CRF Learning for OCR (PGM p3.week2)"
 author: "Sergei Semenov"
 categories: learning
-image: 2020-07-PGM_Logo.jpg
+image: 2020-07-PGM_OCR_Learning.jpg
 ---
 # Assignment: CRF Learning for OCR
 Here I would like to write some useful tips, that helped me to deeply understand and complete "CRF Learning for OCR" home assignment from Probabilistic Graphical Models course on Coursera (it's part3, week 2)
@@ -103,7 +103,7 @@ So, the trick here is to use conditional distribution
 
 In this case, Clique tree would contain only 2 cliques
 
-[TBD]
+Now let's go to [part 2](https://simonrus.github.io/about/learning/2020-07-23-PGM-Tutorial-p3-w2_part2.html)
 
 
 
