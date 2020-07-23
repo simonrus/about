@@ -4,6 +4,15 @@
 
 960 * 540
 
+## How links are converted
+Was 
+https://simonrus.github.io/about/learning/2020-07-23-PGM-Tutorial-p3-w2_part2.html)
+Now
+https://simonrus.github.io/about/learning/PGM-Tutorial-p3-w2_part2.html
+
+## Integration with Notable can be possible!
+
+
 # Millennial
 
 Millennial is a minimalist Jekyll theme for running a simple, clean, content-focused publishing platform for your publication site or blog through [Github Pages](https://pages.github.com/), or on your own server. Everything that you will ever need to know about this Jekyll theme is included in the README below, which you can also find in [the demo site](https://lenpaul.github.io/Millennial/).

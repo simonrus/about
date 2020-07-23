@@ -103,7 +103,7 @@ So, the trick here is to use conditional distribution
 
 In this case, Clique tree would contain only 2 cliques
 
-Now let's go to [part 2](https://simonrus.github.io/about/learning/2020-07-23-PGM-Tutorial-p3-w2_part2.html)
+Now let's go to [part 2](https://simonrus.github.io/about/learning/PGM-Tutorial-p3-w2_part2.html)
 
 
 
