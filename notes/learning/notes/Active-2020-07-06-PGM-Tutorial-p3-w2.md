@@ -2,7 +2,7 @@
 tags: [learning]
 title: Active-2020-07-06-PGM-Tutorial-p3-w2
 created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-24T07:52:34.226Z'
+modified: '2020-07-24T08:05:48.773Z'
 ---
 
 # Active-2020-07-06-PGM-Tutorial-p3-w2
@@ -59,6 +59,7 @@ But first of all, let's move to the model with log-linear features.
 
 ## Log-linear model: from factors to features
 Given the features $$f_{i}$$ and the weight $$\theta_{i}$$ we may write:
+
 $$P(\mathbf{Y} \mid \mathbf{x}: \theta)=\frac{1}{Z_{\mathbf{x}}(\theta)} \exp \left\{\sum_{i=1}^{k} \theta_{i} f_{i}\left(\mathbf{D}_{i}\right)\right\}$$
 
 with the following partition function:
@@ -69,20 +70,19 @@ Every feature is binary and takes 0 or 1 value (presented or not). In this case,
 
 ### Log-linear model: adding shared parameters
 
-How can we simplify our model? Take the next reciepes:
-* Assuming that letter probability doesn't depend on position, we can let factors $$F1,F2,F3$$ to have same parameters and  we can estimate them together $$F_{123}$$.
+How can we simplify our model? Take the next recipes:
+* Assuming that letter probability doesn't depend on position, we can let factors $$F1,F2,F3$$ to have same parameters and  we can estimate them together in $$F_{123}$$.
 * As next step, we can assume that pairwise letter probabilities don't depend on position. We can assume that $$F7 = F8$$ and use $$F_{78}$$ instead.
 * And one extra step: We would use the same OCR model for single character $$F4 = F5 = F6$$ and declare it as $$F_{456}$$.
 
-*To think later*: Can we evaluate parameters using the following model:
+*To think later*: Can we evaluate parameters using the following model?
 ![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing2.inkscape.svg "Graph"){:height="50%" width="50%"}
 
 ### Log-linear model: How many shared parameters?
-For factor $$F_{456}$$ we count number of features and shared parameters using function *ComputeConditionedSingletonFeatures()*. It returns __3\*26\*32=2496 features and 2\*26\*32=1664 shared parameters__ (We have 2 features per pixel - for white and black pixel)
-
-For factor $$F_{123}$$ we use function *ComputeUnconditionedSingletonFeatures()*. It returns __3\*26=78 features and 26 shared parameters__
-
-For factor $$F_{78}$$ the function *ComputeUnconditionedPairFeatures()* is used. It returns __2\*26\*26=1352 features and 26\*26 = 676 shared parameters__
+The programming assignments provide the following functions to evaluate the number of shared parameters:
+* *ComputeConditionedSingletonFeatures()* - counts the number of features and shared parameters from singleton conditioned factors (yes, __conditioned__!). For factor $$F_{456}$$, the function returns __3\*26\*32=2496 features and 2\*26\*32=1664 shared parameters__. That makes sense, since we have 2 feature per pixel - (1 for a white, 1 for a black).
+* *ComputeUnconditionedSingletonFeatures()* - counts for singleton and unconditioned factors. For $$F_{123}$$ we get __3\*26=78 features and 26 shared parameters__.
+* *ComputeUnconditionedPairFeatures()* - It returns, that factor $$F_{78}$$ __2\*26\*26=1352 features and 26\*26 = 676 shared parameters__.
 
 The total number of shared parameters is:
 $$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
