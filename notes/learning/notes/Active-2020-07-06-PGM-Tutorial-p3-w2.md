@@ -2,7 +2,7 @@
 tags: [learning]
 title: Active-2020-07-06-PGM-Tutorial-p3-w2
 created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-24T08:05:48.773Z'
+modified: '2020-07-24T08:38:05.153Z'
 ---
 
 # Active-2020-07-06-PGM-Tutorial-p3-w2
@@ -24,9 +24,10 @@ We have input (observed variable) images $$I$$ or $$X$$ which consists of 32 whi
 We have output (single characters / hidden states) chars $$C$$ or $$Y$$ (26 letters).
 
 We will train an OCR model that have:
-* Singleton factors for observed images $$\widetilde{P}(C_{i} \mid I)$$ that defines OCR model for single character $$i$$.
-* Singleton factors for characters $$P(C)$$ describes letter probability in the English language.
-* Pairwise factors $$P(C_{i}, C_{i+1})$$ describes pairwise letters probability.
+* Singleton conditioned factors for observed images $$\widetilde{P}(C_{i} \mid I)$$. These factors defines a simplest
+ per-symbol OCR model.
+* Singleton factors for characters $$P(C)$$ (actually, letter probability in the English language).
+* Pairwise factors $$P(C_{i}, C_{i+1})$$ are used tp describe pairwise letters probability.
 
 Lets try to build using CPD model
 ##  CPD Model
@@ -82,7 +83,7 @@ How can we simplify our model? Take the next recipes:
 The programming assignments provide the following functions to evaluate the number of shared parameters:
 * *ComputeConditionedSingletonFeatures()* - counts the number of features and shared parameters from singleton conditioned factors (yes, __conditioned__!). For factor $$F_{456}$$, the function returns __3\*26\*32=2496 features and 2\*26\*32=1664 shared parameters__. That makes sense, since we have 2 feature per pixel - (1 for a white, 1 for a black).
 * *ComputeUnconditionedSingletonFeatures()* - counts for singleton and unconditioned factors. For $$F_{123}$$ we get __3\*26=78 features and 26 shared parameters__.
-* *ComputeUnconditionedPairFeatures()* - It returns, that factor $$F_{78}$$ __2\*26\*26=1352 features and 26\*26 = 676 shared parameters__.
+* *ComputeUnconditionedPairFeatures()* - counts parameters for pairwise factors. E.g. for factor $$F_{78}$$ it returns __2\*26\*26=1352 features and 26\*26 = 676 shared parameters__.
 
 The total number of shared parameters is:
 $$card(F_{train}) = 26 + 2 * 26 * 32 + 26 * 26 = 2366$$
