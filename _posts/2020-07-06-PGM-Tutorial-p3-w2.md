@@ -107,3 +107,5 @@ Now let's go to [part 2](https://simonrus.github.io/about/learning/PGM-Tutorial-
 
 
 
+
+*Last update:24 July 2020*

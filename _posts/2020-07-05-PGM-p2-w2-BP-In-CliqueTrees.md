@@ -19,6 +19,16 @@ There is a theorem, that convergence leads to calibration:
 
 $$\sum_{C_{i}-S_{i, j}} \beta_{i}\left(C_{i}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$ 
 
+Calibration property implies that product of messages on both sides of the link is the marginal over the cluster beliefs:
+
+$$\delta_{j \rightarrow i}\left(S_{i, j}\right) \delta_{i \rightarrow j}\left(S_{i, j}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$
+
+BTW If we multiply beliefs over all clusters and devide it to all messages, we can get unnormalized joint distribution:
+
+$$\frac{\prod_{i} \beta_{i}}{\prod_{i, j} \mu_{i, j}}=\frac{\prod_{i} \psi_{i} \prod_{j \in \mathcal{N}_{i}} \delta_{j \rightarrow i}}{\prod_{i, j} \delta_{i \rightarrow j}}= \prod \psi_{i}=\tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)$$
+
+For details one can refer to [Properties of Belief Propagation](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/xm2ul/properties-of-belief-propagation)
+
 # BP in Clique trees
 The one special application of running BP is message passing in clique trees or [Junction tree algorithm](https://en.wikipedia.org/wiki/Junction_tree_algorithm). In this case, BP works faster and gets convergence to the exact inference.
 Moreover, the resulting beliefs are guaranteed to be correct marginals.
@@ -45,3 +55,5 @@ Reference: [And more queries](https://www.coursera.org/learn/probabilistic-graph
 
 
 
+
+*Last update:25 July 2020*

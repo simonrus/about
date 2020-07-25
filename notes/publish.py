@@ -3,16 +3,29 @@
 ## Step1 scan recursively over all files
 
 import os
+import re
 import pdb
+import datetime
 path = "./notes"
 dest = "_posts"
 magic_prefix = "Active-"
+
+def extractModifiedDate(string):
+    regexp = r"\d+-\d+-\d+T\d+:\d+:\d+.\d+Z"
+    date_strings_all = re.findall(regexp,string)
+    date = None
+    if (len(date_strings_all) == 1):
+        date = datetime.datetime.strptime(date_strings_all[0], "%Y-%m-%dT%H:%M:%S.%fZ")
+
+    return date
 
 def processFile(src, dest):   
     state_none = 0
     state_hdr_start = 1
     state_hdr_stop = 2
     state_post_start = 3
+
+    modified_date = None
 
     print("Process file ", src,  " -> ", dest)
 
@@ -32,6 +45,11 @@ def processFile(src, dest):
                 break
 
             skiplines = skiplines + 1
+
+            if state == state_hdr_start:
+                if ("modified" in line):
+                    modified_date = extractModifiedDate(line)
+                    
            
 
         dest_lines = src_lines[skiplines:]
@@ -39,6 +57,10 @@ def processFile(src, dest):
         for i in dest_lines:
             f_out.write(i)
         
+        if (modified_date is not None):
+            f_out.write(os.linesep)
+            f_out.write("*Last update:" + modified_date.strftime("%d %B %Y") + "*" + os.linesep)
+
         f_in.close()
         f_out.close()
 
