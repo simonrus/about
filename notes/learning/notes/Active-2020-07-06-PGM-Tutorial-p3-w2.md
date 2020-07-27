@@ -2,7 +2,7 @@
 tags: [learning]
 title: Active-2020-07-06-PGM-Tutorial-p3-w2
 created: '2020-07-05T10:43:41.740Z'
-modified: '2020-07-24T08:38:05.153Z'
+modified: '2020-07-27T09:32:51.701Z'
 ---
 
 # Active-2020-07-06-PGM-Tutorial-p3-w2
@@ -36,7 +36,7 @@ $$
 F(Y_1, Y_2, Y_3 | X_1, X_2, X_3) = F1(Y_1) * F2(Y_2) * F3(Y_3) * F4(Y_1 \mid X_1) * F5(Y_2 \mid X_2) * F6(Y_3 \mid X_3) * F7 (Y_1, Y_2)* F8 (Y_2, Y_3)
 $$
 
-![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing1.inkscape.svg "Graph"){:height="50%" width="50%"}
+![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing1.inkscape.svg "Graph"){:height="80%" width="80%"}
 
 ### CPD Model: Number of parameters 
 Lets count number of parameters for CPD model. What would be a total number of parameters?
@@ -77,7 +77,7 @@ How can we simplify our model? Take the next recipes:
 * And one extra step: We would use the same OCR model for single character $$F4 = F5 = F6$$ and declare it as $$F_{456}$$.
 
 *To think later*: Can we evaluate parameters using the following model?
-![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing2.inkscape.svg "Graph"){:height="50%" width="50%"}
+![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing2.inkscape.svg "Graph"){:height="80%" width="80%"}
 
 ### Log-linear model: How many shared parameters?
 The programming assignments provide the following functions to evaluate the number of shared parameters:
@@ -95,13 +95,13 @@ $$Z_{\mathbf{x}}(\theta) \equiv \sum_{\mathbf{Y}} \exp \left\{\sum_{i=1}^{k} \th
 
 As previously discussed in [Belief Propagation in Clique Trees](https://simonrus.github.io/about/learning/PGM-p2-w2-BP-In-CliqueTrees.html), BP calculates unnormalized marginals for all cliques. If we were using joint distributions, our model could look like:
 
-![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing3.inkscape.svg "Graph"){:height="50%" width="50%"}
+![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing3.inkscape.svg "Graph"){:height="80%" width="80%"}
 
 The complexity of BP would be extremely huge since it is needed to calculate $$P(Y_n, X_n)$$. It would require knowledge over
 all possible $$X_n$$ or some prior distribution.
 
 So, the trick here is to use conditional distribution. The model may look like:
-![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing4.inkscape.svg "Graph"){:height="50%" width="50%"}
+![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing4.inkscape.svg "Graph"){:height="80%" width="80%"}
 
 Now, our Clique tree contains only 2 cliques.
 
