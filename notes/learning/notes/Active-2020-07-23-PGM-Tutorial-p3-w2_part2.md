@@ -23,7 +23,7 @@ path we shall pass (actually, it defines 80% of success).
  
 ## Selected algorithm
 Here the stochastic gradient is in use. It means, that we run ascent gradient for every training 
-sample independently. We wont see any batches in this assignments.
+sample independently. We won't see any batches in this assignments.
 
 ## How model looks exactly?
 
@@ -33,9 +33,10 @@ We have our initial 8 factors:
 After connecting edges and calling *PruneTree()* (it combines factors with common parts to the one factor) we get something like:
 ![connected 8 factors](https://simonrus.github.io/about/assets/img/2020-07-23-PGM-Tutorial-p3-w2_part2_drawing2.jpg){:height="80%" width="80%"}
 
-Now our model (painter with black) is relative simple. The BP for this tree requires only passing of two messages. The resulting beliefs can be used to extract marginals to compute conditional probabilities for every feature: $$P(Y_1 \mid X_1); P(Y_2 \mid X_2); P(Y_3 \mid X_3)$$
+Now our model (painted with black) is relative simple. The BP for this tree requires only passing of two messages. The resulting beliefs can be 
+used to compute marginals and conditional probabilities for every feature: $$P(Y_1 \mid X_1); P(Y_2 \mid X_2); P(Y_3 \mid X_3)$$
 
-These computations are later used to calculate model expected feature count using following expression:
+After that we can be calculate model expected feature count using following expression:
 $$E_{\theta}\left[f_{i}\right]=\sum_{\mathbf{Y}^{\prime}} P\left(\mathbf{Y}^{\prime} \mid \mathbf{x}\right) f_{i}\left(\mathbf{Y}^{\prime}, \mathbf{x}\right)$$
 
 ## How features are stored in featureSet?

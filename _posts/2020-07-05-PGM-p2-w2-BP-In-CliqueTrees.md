@@ -23,7 +23,7 @@ Calibration property implies that product of messages on both sides of the link 
 
 $$\delta_{j \rightarrow i}\left(S_{i, j}\right) \delta_{i \rightarrow j}\left(S_{i, j}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$
 
-BTW If we multiply beliefs over all clusters and devide it to all messages, we can get unnormalized joint distribution:
+BTW If we multiply beliefs over all clusters and divide it to all messages, we can get unnormalized joint distribution:
 
 $$\frac{\prod_{i} \beta_{i}}{\prod_{i, j} \mu_{i, j}}=\frac{\prod_{i} \psi_{i} \prod_{j \in \mathcal{N}_{i}} \delta_{j \rightarrow i}}{\prod_{i, j} \delta_{i \rightarrow j}}= \prod \psi_{i}=\tilde{P}_{\Phi}\left(X_{1}, \ldots, X_{n}\right)$$
 

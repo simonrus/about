@@ -24,14 +24,14 @@ We have input (observed variable) images $$I$$ or $$X$$ which consists of 32 whi
 We have output (single characters / hidden states) chars $$C$$ or $$Y$$ (26 letters).
 
 We will train an OCR model that have:
-* Singleton conditioned factors for observed images $$\widetilde{P}(C_{i} \mid I)$$. These factors defines a simplest
+* Singleton conditioned factors for observed images $$\widetilde{P}(C_{i} \mid I)$$. These factors define a simplest
  per-symbol OCR model.
 * Singleton factors for characters $$P(C)$$ (actually, letter probability in the English language).
 * Pairwise factors $$P(C_{i}, C_{i+1})$$ are used tp describe pairwise letters probability.
 
-Lets try to build using CPD model
+Let's build CPD model
 ##  CPD Model
-Let's try to represent our model as the MN with the following structure:
+We can represent our model as a MN with the following structure:
 $$
 F(Y_1, Y_2, Y_3 | X_1, X_2, X_3) = F1(Y_1) * F2(Y_2) * F3(Y_3) * F4(Y_1 \mid X_1) * F5(Y_2 \mid X_2) * F6(Y_3 \mid X_3) * F7 (Y_1, Y_2)* F8 (Y_2, Y_3)
 $$
@@ -39,7 +39,7 @@ $$
 ![full graph](https://simonrus.github.io/about/assets/img/2020-07_PGM_p2_week2_drawing1.inkscape.svg "Graph"){:height="80%" width="80%"}
 
 ### CPD Model: Number of parameters 
-Lets count number of parameters for CPD model. What would be a total number of parameters?
+Let's count number of parameters for CPD model. What would be a total number of parameters?
 
 $$
 card(F1) = 26 \\
