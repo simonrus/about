@@ -22,9 +22,9 @@ $$\operatorname{cost}\left(h_{\theta}(x), y\right)=
 It was unclear for me, where this function comes from come. This expression looked very familiar to me. Let's try to derive it using classical estimation theory.
 
 # Model selection
-Assume that, we have a set of features, denoted as $\theta_{i}$, and training samples $D = \{x[m], y[m]\}_{m=1}^{M}$
+Assume that, we have a set of features, denoted as $$\theta_{i}$$, and training samples $$D = \{x[m], y[m]\}_{m=1}^{M}$$
 
-Outputs ($y[m]$) can take only binary values. In our training set the exact number is $M_0$ and $M_1$ for values $0$ and $1$ respectively. $x[m]$ is a series of input vectors (features).
+Outputs ($$y[m]$$) can take only binary values. In our training set the exact number is $$M_0$$ and $$M_1$$ for values $$0$$ and $$1$$ respectively. $$x[m]$$ is a series of input vectors (features).
 
 We will use a logistic regression model:
 $$P(Y=1\mid\theta) = h_{\theta}(x)= \frac{1}{1 + exp(-\theta^{T}x)}$$
@@ -32,17 +32,17 @@ It means, that:
 $$P(Y=0\mid\theta) = 1 - h_{\theta}(x) = \frac{exp(-\theta^{T}x)}{1 + exp(-\theta^{T}x)}$$
 
 # MLE in action
-Out goal is to find $\theta$, that suit features the best. Let's calculate MLE for a given training set $D$:
+Out goal is to find $$\theta$$, that suit features the best. Let's calculate MLE for a given training set $$D$$:
 $$L(\theta : D) = \prod_{m=1}^{M_1}{\hat{P}(y[m]=1\mid x)} \prod_{m=1}^{M_0}{\hat{P}(y[m]=0\mid x)}$$
 or in logarithmic form:
 $$l(\theta : D) = \sum_{m=1}^{M_1}{\log\hat{P}(y[m]=1\mid\theta)} + \sum_{m=1}^{M_0}{\log\left(1 - \hat{P}(y[m]=1\mid\theta)\right)}= \\
 = \sum_{m=1}^{M_1}\log(h_{\theta}(x)) + \sum_{m=1}^{M_0}\log(1 - h_{\theta}(x))$$
 
-It is easy to make next step. We can extend the first expression over all possible $M$ by introducing indicator functions:
+It is easy to make next step. We can extend the first expression over all possible $$M$$ by introducing indicator functions:
 $$l(\theta : D) = \sum_{m=1}^{M}y[m]\log(h_{\theta}(x[m])) + \sum_{m=1}^{M}(1 - y[m])\log(1 - h_{\theta}(x[m])) = \\ 
 = \sum_{m=1}^{M} \big( y[m]\log(h_{\theta}(x[m]) + (1 - y[m])\log(1 - h_{\theta}(x[m]))\big)$$
 
-MLE solution doesn't change if we scale by $M$. Also, instead of maximizing likelihood, we can minimize the negative likelihood. And the cost function, which we want to minimize, now is:
+MLE solution doesn't change if we scale by $$M$$. Also, instead of maximizing likelihood, we can minimize the negative likelihood. And the cost function, which we want to minimize, now is:
 $$J(\theta) = \frac{-l(\theta : D)}{M}= \frac{1}{M} \sum_{m=1}^{M} \big(- y[m]\log(h_{\theta}(x[m]) - (1 - y[m])\log(1 - h_{\theta}(x[m]))\big)$$
 
 # Conclusions

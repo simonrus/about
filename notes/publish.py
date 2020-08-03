@@ -19,6 +19,9 @@ def extractModifiedDate(string):
 
     return date
 
+def insert_str(string, str_to_insert, index):
+    return string[:index] + str_to_insert + string[index:]
+
 def processFile(src, dest):   
     state_none = 0
     state_hdr_start = 1
@@ -49,10 +52,32 @@ def processFile(src, dest):
             if state == state_hdr_start:
                 if ("modified" in line):
                     modified_date = extractModifiedDate(line)
-                    
-           
+    
 
         dest_lines = src_lines[skiplines:]
+
+        for i in range(0, len(dest_lines)):
+            if state == state_post_start:
+                line = dest_lines[i]
+                 # find lines with single $
+                start_pos = 0
+                pos = line.find('$', start_pos)
+                while (pos != -1):
+                    if pos + 1 < len(line):
+                        if (line[pos + 1] != '$'):
+                            line = insert_str(line, '$' ,pos)
+                            pos = pos + 1
+                        else:
+                            while(line[pos + 1] == '$'):
+                                pos = pos + 1
+                    else:
+                        line = insert_str(line, '$' ,pos)
+                        pos = pos + 1
+
+                    start_pos = pos + 1
+                    pos = line.find('$', start_pos)
+
+                dest_lines[i] = line
         
         for i in dest_lines:
             f_out.write(i)
