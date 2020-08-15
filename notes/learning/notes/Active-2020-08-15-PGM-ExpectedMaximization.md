@@ -1,7 +1,7 @@
 ---
 title: Active-2020-08-15-PGM-ExpectedMaximization
 created: '2020-08-15T05:04:17.063Z'
-modified: '2020-08-15T06:59:30.554Z'
+modified: '2020-08-15T09:01:58.221Z'
 ---
 
 # Active-2020-08-15-PGM-ExpectedMaximization
@@ -46,13 +46,36 @@ One option is to select it manually using some prior knowledge. I would prefer t
 | 1 | $\theta_{X_2=1, C=0}$ | $\theta_{X_2=1, C=1}$ | 
 
 
-## What we want to do?
-We want to find all $\theta$\s 
+# EM intro: What we want to do?
+We want to find all $\theta$s. If we had $C$ in our data set $D$, it would be a simple task. 
 
-TBD
-#
-https://www.coursera.org/learn/bayesian-methods-in-machine-learning/home/week/2
-https://ermongroup.github.io/cs228-notes/learning/latent/
-https://ermongroup.github.io/cs228-notes/learning/directed/
+Maybe we can somehow extend every sample $d[m] = \{x_1[m], x_2[m] \}$ of $D$ with some $\hat{c}[m]$ to have a have a full observations $\hat{d}[m] =\{x_1[m], x_2[m], \hat{c}[m]\}$? Can $\hat{c}[m]$ possible represent some expected values?
+
+But we need some already known $\theta$s! 
+
+It is called "egg and chicken problem". So, we can start with some initial $\theta^{(0)} = \{\theta^{(0)}_{C=0}, \theta^{(0)}_{C=1},\}$ and try to build data samples $\hat{D}^{(0)} = \{x_1[m], x_2[m], \hat{c}^{(0)}[m]\}_{m=1}^M$, where missing(latent) variable $c$ is replaced with expected value $\hat{c}^{(0)}[m]$. This step is called *E-Step*. 
+
+Then we can again evaluate new $\theta^{(1)}$ using MLE procedure. It would be *M-Step*.
+
+Repeat *E-Step* and *M-Step* many times, until updates/corrections of $\hat{D}^{(t)}$ do not bring any improvements in likelihood for $\theta^{(t+1)}$. It will be our final estimation.
+
+## E-Step: from $\theta^{(t)}$ to $\hat{D}^{(t)}$
+As said before, we want to extend every sample $\hat{d}[m]$ of $\hat{D}$ with some $\hat{c}[m]$ to have a triplet $\hat{d}[m] =\{x_1[m], x_2[m], \hat{c}[m]\}$. Particularly, in our example at step $t$ we calculate:
+
+$$\hat{c}_{c}^{(t)}[m] = P(C=c \mid x_1[m], x_2[m]) = \frac{P(C=c, x_1[m], x_2[m])}{\sum_{c}P(C=c, x_1[m], x_2[m])} =
+ \frac{P(x_1[m], x_2[m] \mid C=c)P(C=c)}{\sum_{c}P(x_1[m], x_2[m] \mid C=c)P(C=c)}$$
+
+where $\hat{c}_{c}^{(t)}[m]$ is expected value of variable $C$ (at step $t$ and sample $m$) taken in different clusters, Or just $P(C=0 \mid x_1[m], x_2[m])$ and $P(C=1 \mid x_1[m], x_2[m])$ in the empirical distribution.
+
+## M-Step: from $\hat{D}^{(t)}$ to $\theta^{(t+1)}$
+It is just a MLE solution for $\hat{D}^{(t)}$:
+
+$$\theta^{(t+1)} = \argmax_\theta \hat{D}^{(t)}$$
+
+# Cool links
+1. [Probabilistic Graphical Models at Coursera (Daphna Koller, Stanford)](https://www.coursera.org/learn/probabilistic-graphical-models-3-learning/lecture/YVVxw/expectation-maximization-intro)
+2. [Bayesian Methods In Machine Learning at Coursera (Novikov, HSE)](https://www.coursera.org/learn/bayesian-methods-in-machine-learning/home/week/2)
+3. [cs228 notes: latent variables](https://ermongroup.github.io/cs228-notes/learning/latent/)
+4. [cs228 notes: learning in directed models](https://ermongroup.github.io/cs228-notes/learning/directed/)
 
 
