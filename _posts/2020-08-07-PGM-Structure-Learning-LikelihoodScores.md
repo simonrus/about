@@ -18,12 +18,10 @@ Theorem says, that:
 
 $$\operatorname{score}_{L}(\mathcal{G}: \mathcal{D})=M \sum_{i=1}^{n} \mathbf{I}_{\hat{P}}\left(X_{i} ; \mathbf{P a}_{X_{i}}^{G}\right)-M \sum_{i=1}^{n} \boldsymbol{H}_{\hat{P}}\left(X_{i}\right)$$
 
-There is a proof in a course book, but I would like to provide an induction-based proof.
-
-## Proof by induction
+## Property
 Let's assume, that $$G_0$$ is a graph, where all variables are independent. The likelihood score can be written as:
 
-$$\operatorname{score}_{L}(\mathcal{G_0}: \mathcal{D})= M \sum_{i=1}^{n} \boldsymbol{H}_{\hat{P}}\left(X_{i}\right)$$
+$$\operatorname{score}_{L}(\mathcal{G_0}: \mathcal{D})= - M \sum_{i=1}^{n} \boldsymbol{H}_{\hat{P}}\left(X_{i}\right)$$
 
 Let's connect a pair of nodes (e.g $$X_i$$ -> $$X_j$$). Denote new graph as $$G_1$$. The likelihood score will be:
 
@@ -33,7 +31,8 @@ If can be seen, that one connection adds contribution that is equivalent to exac
 
 If $$X_i \perp\!\!\!\perp X_j$$, then $$\mathbf{I}_{\hat{P}}\left(X_{i};X_{j}\right) = 0$$ and we get the same likelihood score as for graph $$G_0$$.
 
-The theorem is proved by induction.
+## Does direction plays role?
+The direction doesn't play any role. But if the parents list was affected(!), the likelihood score changes
 
 ## Interesting facts
 $$\mathbf{I}_{\hat{P}}\left(X_{i}\right) = 0$$ and $$\mathbf{I}_{\hat{P}}\left(X_{i};\emptyset\right) = 0$$
@@ -44,4 +43,4 @@ $$\mathbf{I}_{\hat{P}}\left(X_{i}\right) = 0$$ and $$\mathbf{I}_{\hat{P}}\left(X
 
 
 
-*Last update:05 August 2020*
+*Last update:16 August 2020*

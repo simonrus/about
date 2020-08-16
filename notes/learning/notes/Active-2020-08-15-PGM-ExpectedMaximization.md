@@ -1,7 +1,7 @@
 ---
 title: Active-2020-08-15-PGM-ExpectedMaximization
 created: '2020-08-15T05:04:17.063Z'
-modified: '2020-08-15T09:01:58.221Z'
+modified: '2020-08-15T13:34:55.908Z'
 ---
 
 # Active-2020-08-15-PGM-ExpectedMaximization
@@ -20,15 +20,13 @@ Let's take it and see how EM works.
 
 ![Naive BN](https://simonrus.github.io/about/assets/img/2020-08-15-PGM-ExpectedMaximization_drawing1.inkscape.svg){:height="80%" width="80%"}
 
-The $X1$ and $X2$ are observed and $C$ is not observed. Our data set is $D=\{x_1[m], x_2[m]  \}_{m=1}^M$. We can also assume for our test case, that $X1$ and $X2$ are binary values.
+The $X1$ and $X2$ are observed and $C$ is not observed. Our data set consists of the following samples: $D=\{x_1[m], x_2[m]  \}_{m=1}^M$. For our test example we can assume, that $X1$ and $X2$ are binary values.
 
 ## Is it a Clustering?
-Yes, we can state, that in this particular form we do simple clustering. Our task sounds: "Given a set of data points, we want to classify each data point into a specific group".
-
-If we take another graph or network structure, it will be a graph with latent (hidden variables)
+Yes, we can state, that in this particular form we do clustering. Our task sounds: "Given a set of data points, we want to classify each data point into a specific group".
 
 ## How to select cardinality of C?
-One option is to select it manually using some prior knowledge. I would prefer to have it binary for a given example. Our CPD tables would be:
+One option is to select it manually using some prior knowledge. I would prefer to have it binary for our example. Then our CPD tables would look like:
 
 |   |    $P(C)$      |
 |---|:--------------:|
@@ -47,9 +45,11 @@ One option is to select it manually using some prior knowledge. I would prefer t
 
 
 # EM intro: What we want to do?
-We want to find all $\theta$s. If we had $C$ in our data set $D$, it would be a simple task. 
+We want to find all $\theta$s. If we had $C$ in our data set $D$, it would be an easy task. 
 
-Maybe we can somehow extend every sample $d[m] = \{x_1[m], x_2[m] \}$ of $D$ with some $\hat{c}[m]$ to have a have a full observations $\hat{d}[m] =\{x_1[m], x_2[m], \hat{c}[m]\}$? Can $\hat{c}[m]$ possible represent some expected values?
+It would be cool, if we could somehow extend every sample $d[m] = \{x_1[m], x_2[m] \}$ of $D$ with some $\hat{c}[m]$ for  missing values. In this case, we would have a full observations $\hat{d}[m] =\{x_1[m], x_2[m], \hat{c}[m]\}$!
+
+How we can do it? Let's use expected values.
 
 But we need some already known $\theta$s! 
 
