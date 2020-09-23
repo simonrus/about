@@ -8,9 +8,9 @@ google-ID: ''
 
 menu:
 - {name: 'Interesting Facts', folder: 'pages', file: 'facts.html'}
-- {name: 'Learning', folder: 'pages', file: 'learning.html'}
-- {name: 'Sample Posts', folder: 'pages', file: 'sample-posts.html'}
-- {name: 'Documentation', folder: 'pages', file: 'documentation.html'}
+- {name: 'Machine Learning', folder: 'pages', file: 'ml.html'}
+- {name: 'Error Correcting Codes', folder: 'pages', file: 'fec.html'}
+- {name: 'Signal Processing', folder: 'pages', file: 'sp.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
 
