@@ -1,7 +1,7 @@
 ---
 title: Active-2020-09-27-TBCC-Decoding_part1
 created: '2020-09-27T07:19:10.499Z'
-modified: '2020-09-27T09:14:41.452Z'
+modified: '2020-09-27T10:02:48.842Z'
 ---
 
 # Active-2020-09-27-TBCC-Decoding_part1
@@ -36,23 +36,37 @@ is a closest codeword sequence over all possible runs.
 
 Total required Viterbi runs is $2^{mK}$
 
+# Classification
+Simply, all methods can be devided into following groups:
+1) Suboptimal - tries to reduce space of possible starting states
+2) ...
+
 # (1986) Article "On Tail Biting Convolutional Codes" by H. MA, J. Wolf 
 [Source on IEEE](http://ieeexplore.ieee.org/document/1096498/)
 DOI: 10.1109/TCOM.1986.1096498
 
 This article compares solution from Bard-David with author's one. 
-## Bard-David (1982)
+## Bard-David (1982) - suboptimal
 Algorithm offers custom steps order and has following steps:
 1. Choose an arbitrary starting state and Decode using a maximum likelihood decoder. 
 2. Check if the starting state is the same as the ending state. If yes, stop, otherwise go to step 3.
 3. Use the previous ending state as the new starting state.
 
-## Two-step scheme
+## Two-step scheme - suboptimal
 Author (H.Ma) provides own steps order, based on continued fractions list. The algorithm does the following:
 1. Obtain ordered list of $2^{mK}$ starting state using an algebraic method called "continued fractions". The method is described in PhD and, unfortunately,not available
 2. Run with starting state from list until found
 
 ![simulation_results](https://simonrus.github.io/about/assets/img/2020-09-27-TBCC-Decoding_part1_hma_simulation_results.png)
 
-# TBD
+# US 6256764 (2001) - suboptimal 
+Author: Atallah Isa Bisher
+Algorithm:  
+1. set all starting states scores to 0
+2. Run viterbi
+3. find ending best state $S_min$
+4. find set of other passes $\beta = {S_i}: dist(S_i, S_min) < K$ 
+5. Find state in $\beta$ set, where starting state and ending state is the same
+
+
 

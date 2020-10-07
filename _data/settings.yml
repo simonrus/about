@@ -11,6 +11,7 @@ menu:
 - {name: 'Machine Learning', folder: 'pages', file: 'ml.html'}
 - {name: 'Error Correcting Codes', folder: 'pages', file: 'fec.html'}
 - {name: 'Signal Processing', folder: 'pages', file: 'sp.html'}
+- {name: 'Cheatsheets', folder: 'pages', file: 'cheatsheets.html'}
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
 
