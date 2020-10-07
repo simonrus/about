@@ -34,10 +34,22 @@ conda activate pytorch
 conda install pytorch torchvision cudatoolkit=10.2 -c pytorch 
 ```
 
+# Use with google colab (WOW)
+```bash
+jupyter notebook   --NotebookApp.allow_origin='https://colab.research.google.com'   --port=8889   --NotebookApp.port_retries=0
+```
+copy and past link to colab
+
+# But how to merry it with git??
+TBD
+```
+(https://medium.com/@ashwindesilva/how-to-use-google-colaboratory-to-clone-a-github-repository-e07cf8d3d22b)[https://medium.com/@ashwindesilva/how-to-use-google-colaboratory-to-clone-a-github-repository-e07cf8d3d22b]
+```
+
 # Links
 1. [https://linuxconfig.org/how-to-install-cuda-on-ubuntu-20-04-focal-fossa-linux](https://linuxconfig.org/how-to-install-cuda-on-ubuntu-20-04-focal-fossa-linux)
 2. [https://timoast.github.io/blog/installing-pytorch/](https://timoast.github.io/blog/installing-pytorch/)
-
+3,
 
 
 *Last update:07 October 2020*
