@@ -1,14 +1,14 @@
 ---
 title: Active-2020-10-07-CheatsheetsUbuntu2020InstallingCudaPyTorch
 created: '2020-10-07T11:26:31.667Z'
-modified: '2020-10-07T14:39:26.341Z'
+modified: '2020-11-04T16:31:07.981Z'
 ---
 
 # Active-2020-10-07-Cheatsheets_Ubuntu2020_Installing_Cuda_PyTorch
 
 ---
 layout: post
-title: "Cheetsheet: Installing Cuda and PyTorch on Ubuntu 2020"
+title: "Cheat sheet: Installing Cuda and PyTorch on Ubuntu 2020"
 author: "Sergei Semenov"
 categories: cheatsheets
 image: 2020-10-07-Cheatsheets_Ubuntu2020_Installing_Cuda_PyTorch.jpg

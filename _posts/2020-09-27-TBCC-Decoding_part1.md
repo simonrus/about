@@ -8,9 +8,10 @@ image: TBCC_Logo.jpg
 
 # Introduction
 Tailbiting convolutional codes (TBCC) are widely used (PDCCH LTE, 802.11), because they:
-* can be represented as quasi-cyclic block codes;
-* have equal error protection over all bits if we compare with truncated construction;
-* allow easy rate matching.
+* Can be represented as quasi-cyclic block codes.
+* Have equal error protection over all bits if we compare with truncated construction.
+* Achieve the best minimum distance for short- and medium lengths.
+* Allow easy rate matching.
 
 The main drawback of TBCC is an additional decoding complexity. Decoder (e.g. Viterbi) shall know/predict the starting state in a trellis. In this series of posts I will provide an overview of main existing methods/ideas and patents.
 
@@ -20,7 +21,7 @@ The following notation will be used
 * $$R = \frac{K}{N}$$ - rate
 * $$K$$ - number of shift registers used (let's assume we use controller canonical form)
 
- Note: "Controller canonical form" has encoder implementation with $$K$$ registers and $$N$$ adders. The other known form is "Observer canonical form@. It is done with $$N$$ shift registers and $$K$$ adders.
+ Note: "Controller canonical form" has encoder implementation with $$K$$ registers and $$N$$ adders. The other known form is "Observer canonical form". It is done with $$N$$ shift registers and $$K$$ adders.
 
 # Reference Decoder 
 Well, as the reference decoder we will use Viterbi decoder, that starts on every possible starting state. The decoding result
@@ -53,6 +54,7 @@ Author (H.Ma) provides own steps order, based on continued fractions list. The a
 
 # US 6256764 (2001) - suboptimal 
 Author: Atallah Isa Bisher
+[Pattent 6256764](https://portal.unifiedpatents.com/patents/patent/US-6256764-B1)
 Algorithm:  
 1. set all starting states scores to 0
 2. Run viterbi
@@ -60,7 +62,9 @@ Algorithm:
 4. find set of other passes $$\beta = {S_i}: dist(S_i, S_min) < K$$ 
 5. Find state in $$\beta$$ set, where starting state and ending state is the same
 
+# References
+1. H. Ma and J. Wolf, “On Tail Biting Convolutional Codes,” IEEE Trans. Commun., vol. 34, no. 2, pp. 104–111, Feb. 1986, doi: 10.1109/TCOM.1986.1096498.
+2. R. Y. Shao, Shu Lin, and M. P. C. Fossorier, “Two decoding algorithms for tailbiting codes,” IEEE Trans. Commun., vol. 51, no. 10, pp. 1658–1665, Oct. 2003, doi: 10.1109/TCOMM.2003.818084.
 
 
-
-*Last update:27 September 2020*
+*Last update:08 October 2020*

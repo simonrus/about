@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cheetsheet: Installing Cuda and PyTorch on Ubuntu 2020"
+title: "Cheat sheet: Installing Cuda and PyTorch on Ubuntu 2020"
 author: "Sergei Semenov"
 categories: cheatsheets
 image: 2020-10-07-Cheatsheets_Ubuntu2020_Installing_Cuda_PyTorch.jpg
@@ -52,4 +52,4 @@ TBD
 3,
 
 
-*Last update:07 October 2020*
+*Last update:04 November 2020*
