@@ -9,6 +9,7 @@ image: 2020-11-04-Cheatsheets_FromMatlabToNumpyAndPytorch.jpg
 
 # Matrices/Tensors
 ## Construction
+
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
 | NaN(5, 3)	 | np.ones([5,3]) * np.nan | torch.empty(5, 3)	|
@@ -65,6 +66,7 @@ Select device to store tensor
 
 ## Template
 This document will be updated regulary
+
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
 |   	|   	|   	|

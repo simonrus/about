@@ -1,7 +1,7 @@
 ---
 title: Active-2020-11-04-Cheatsheets_FromMatlabToNumpyAndPytorch
 created: '2020-10-07T11:26:31.667Z'
-modified: '2020-11-29T07:24:20.261Z'
+modified: '2020-11-29T10:17:27.498Z'
 ---
 
 # Active-2020-11-04-Cheatsheets_FromMatlabToNumpyAndPytorch
@@ -17,6 +17,7 @@ image: 2020-11-04-Cheatsheets_FromMatlabToNumpyAndPytorch.jpg
 
 # Matrices/Tensors
 ## Construction
+
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
 | NaN(5, 3)	 | np.ones([5,3]) * np.nan | torch.empty(5, 3)	|
@@ -73,6 +74,7 @@ Select device to store tensor
 
 ## Template
 This document will be updated regulary
+
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
 |   	|   	|   	|
