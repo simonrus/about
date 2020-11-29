@@ -11,7 +11,7 @@ image: 2020-11-04-Cheatsheets_FromMatlabToNumpyAndPytorch.jpg
 ## Construction
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
-| NaN(5, 3)	 | ? | torch.empty(5, 3)	|
+| NaN(5, 3)	 | np.ones([5,3]) * np.nan | torch.empty(5, 3)	|
 | rand(5, 3) |  np.random.rand(5,3) 	| torch.rand(5, 3)	|
 | zeros(5, 3)	|  np.zeros([5,3]) 	| torch.zeros(5, 3)	|
 | ones(5, 3) |  np.ones([5,3]) 	| torch.ones(5, 3)	|
@@ -59,12 +59,12 @@ Select device to store tensor
 # Shapes
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
-| reshape 	|   	| view  	|
+| reshape(x,3,4)	|  x.reshape(3,4,order=’F’).copy()  	| view  	|
 
 
 
 ## Template
-
+This document will be updated regulary
 | Matlab  	|  Numpy 	|  Pytorch 	|
 |:-:	|:-:	|:-:	|
 |   	|   	|   	|
@@ -79,6 +79,7 @@ Select device to store tensor
 # References
 1. [https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html](https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html)
 2. [https://blog.paperspace.com/pytorch-101-understanding-graphs-and-automatic-differentiation/](https://blog.paperspace.com/pytorch-101-understanding-graphs-and-automatic-differentiation/)
+3. [https://numpy.org/doc/stable/user/numpy-for-matlab-users.html](https://numpy.org/doc/stable/user/numpy-for-matlab-users.html)
 
 
-*Last update:08 November 2020*
+*Last update:29 November 2020*
