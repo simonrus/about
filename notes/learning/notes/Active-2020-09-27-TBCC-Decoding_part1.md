@@ -1,7 +1,7 @@
 ---
 title: Active-2020-09-27-TBCC-Decoding_part1
 created: '2020-09-27T07:19:10.499Z'
-modified: '2020-10-08T07:22:53.162Z'
+modified: '2020-11-29T20:09:58.325Z'
 ---
 
 # Active-2020-09-27-TBCC-Decoding_part1
@@ -38,7 +38,7 @@ is a closest codeword sequence over all possible runs.
 Total required Viterbi runs is $2^{mK}$
 
 # Classification
-Simply, all methods can be devided into following groups:
+Simply, all methods can be divided into following groups:
 1) Suboptimal - tries to reduce space of possible starting states
 2) ...
 

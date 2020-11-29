@@ -30,7 +30,7 @@ is a closest codeword sequence over all possible runs.
 Total required Viterbi runs is $$2^{mK}$$
 
 # Classification
-Simply, all methods can be devided into following groups:
+Simply, all methods can be divided into following groups:
 1) Suboptimal - tries to reduce space of possible starting states
 2) ...
 
@@ -67,4 +67,4 @@ Algorithm:
 2. R. Y. Shao, Shu Lin, and M. P. C. Fossorier, “Two decoding algorithms for tailbiting codes,” IEEE Trans. Commun., vol. 51, no. 10, pp. 1658–1665, Oct. 2003, doi: 10.1109/TCOMM.2003.818084.
 
 
-*Last update:08 October 2020*
+*Last update:29 November 2020*
