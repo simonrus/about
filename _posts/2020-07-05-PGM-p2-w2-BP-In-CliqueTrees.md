@@ -41,7 +41,7 @@ A: yes, we need to apply proper scheduling for messages (start from leaves)
 A: yes, it can simplify computations using evidence. How? Run BP. Take any cluster, that has required variables and do marginalization. The output will be unnormalized measurements
 
 If we have a new evidence Z, find a cluster that has variables from Z and do computations only in this cluster. Calculate the 
-$$P_{\psi}(X \mid Z) = \frac {\widetilde{P}_{\psi}(X, Z)}{\widetilde{P}_{\psi}(X)} = \frac {\widetilde{P}_{\psi}(X, Z)}{\sum_{Z}\widetilde{P}_{\psi}(X \mid Z)}$$*REALLY? NOTE: CHECKME, Sergei!!!*
+$$P_{\psi}(X \mid Z) = \frac {\widetilde{P}_{\psi}(X, Z)}{\widetilde{P}_{\psi}(X)} = \frac {\widetilde{P}_{\psi}(X, Z)}{\sum_{Z}\widetilde{P}_{\psi}(X \mid Z)}$$
 
 Reference: [Answering queries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
 
@@ -57,4 +57,4 @@ Reference: [And more queries](https://www.coursera.org/learn/probabilistic-graph
 
 
 
-*Last update:03 August 2020*
+*Last update:30 November 2020*
