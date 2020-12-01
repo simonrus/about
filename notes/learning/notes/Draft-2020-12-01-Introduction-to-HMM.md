@@ -1,7 +1,7 @@
 ---
 title: Draft-2020-12-01-Introduction-to-HMM
 created: '2020-12-01T07:12:56.473Z'
-modified: '2020-12-01T19:09:17.070Z'
+modified: '2020-12-01T20:33:43.437Z'
 ---
 
 # Draft-2020-12-01-Introduction-to-HMM
@@ -24,7 +24,22 @@ I was always excited how powerful HMMs could be and what elegant solutions they 
 
 ![full graph](https://simonrus.github.io/about/assets/img/2020-12_BCJR_Trellis.svg "Graph"){:height="80%" width="80%"}
 
-# 
+# Simpliest example
+Assume that we have a temporal graphical model that produces step by step some samples from states S and O.  "S" samples are hidden (latent) and are staying unknown for us. "O" samples are observed. For every sample "S" there is a corresponding sample "O". 
+
+![full graph](https://simonrus.github.io/about/assets/img/2020-12_HMM_States.png "Graph"){:height="80%" width="80%"}
+
+The simplest example of HMMs is a speech recognition task. Imagine that a person said some word. The word consists of letters.  Some letters are inaudible. Some letters were pronounced unclearly. Some letters sound similar to others. But our brain can use some prior knowledge and can determine the original word.
+
+Simple, right? We just wanted to estimate "S"s using "O"s. But can we imagine some extra applications? Yes, we can do something more exciting. 
+
+It is clear, that estimation of "S" depends not only on samples "O", but depends on our prior knowledge. Let's call this prior knowledge as a model. 
+
+Can we find the model, that gives us the best "S" for a given "O"? Yes! And Expected Maximisation (EM) algorithm does it.  Now, we can train a model using known "S" and "O". 
+
+Can we have some more fun? Yes. We could notice, that for the same observations different models provide different estimations of "S". It means, that a model defines a transformation of data to other data. And it automatically brings us the understanding how generative networks work. 
+
+Ok, no more words. Let's dive deep.
 
 # Hidden Markov Models
 The best resource to start with HMMs is the article of L.A. Rabiner “A tutorial on hidden Markov models and selected applications in speech recognition”. 
