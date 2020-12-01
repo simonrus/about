@@ -1,7 +1,7 @@
 ---
 title: Draft-2020-12-01-Introduction-to-HMM
 created: '2020-12-01T07:12:56.473Z'
-modified: '2020-12-01T07:57:51.686Z'
+modified: '2020-12-01T19:09:17.070Z'
 ---
 
 # Draft-2020-12-01-Introduction-to-HMM
@@ -24,8 +24,10 @@ I was always excited how powerful HMMs could be and what elegant solutions they 
 
 ![full graph](https://simonrus.github.io/about/assets/img/2020-12_BCJR_Trellis.svg "Graph"){:height="80%" width="80%"}
 
+# 
+
 # Hidden Markov Models
-The best resource to start with HMMs is the the article to L.A. Rabiner “A tutorial on hidden Markov models and selected applications in speech recognition”
+The best resource to start with HMMs is the article of L.A. Rabiner “A tutorial on hidden Markov models and selected applications in speech recognition”. 
 
 
 #
