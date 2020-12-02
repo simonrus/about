@@ -8,7 +8,7 @@ image: 2020-07-PGM_Logo.jpg
 
 # Introduction
 
-The Hidden Markov Models is an extremely powerful subclass of probabilistic temporal models. The concept of using hidden(latent) variables and estimation of their values is used in various algorithms: BCJR, Kalman filters and in many applications, like speech recognition.
+The Hidden Markov Models is an extremely powerful subclass of probabilistic temporal models. The concept of using hidden(latent) variables and estimation of their values is used in various algorithms, like Kalman filters, and in many applications, like speech recognition or turbo codes decoding.
 
 It seems that artificial recurrent neural networks (RNN) and a concept of Long short-term memory (LSTM) assimilate the nature of Hidden Markov Models by combining hidden (latent) variables within a deep neural network.
 
@@ -27,7 +27,7 @@ It is clear, that estimation of "S" depends not only on samples "O", but depends
 
 Can we find the model, that gives us the best "S" for a given "O"? Yes! And Expected Maximization(EM) algorithm does it.  Now, we can train a model using known "S" and "O". 
 
-Can we have some more fun? Yes. We could notice, that for the same observations different models provide different estimations of "S". It means, that a model defines a transformation of data to other data. And it automatically brings us the understanding how generative networks work. 
+Can we have some more fun? Yes. We may notice, that for the same observations different models provide different estimations of "S". It means, that a model defines a transformation of data to other data. And it automatically brings us the understanding how generative networks work. 
 
 Ok, no more words. Let's dive deep.
 
@@ -57,7 +57,7 @@ In other words: if we observe $$\hat{O} = \{\hat{O_1},\hat{O_2}...\hat{O_L}\}$$,
 A: BCJR Algorithm (Forward Backward Algorithm)
 
 ## Problem 2: Hidden states estimation
-Q: What were sequence $$\hat{S} = \hat{S_1},\hat{S_2}...\hat{S_L}$$ that could "most likely" produce our sequence $$\hat{O}$$?
+Q: What is sequence $$\hat{S} = \hat{S_1},\hat{S_2}...\hat{S_L}$$ that could "most likely" produce our sequence $$\hat{O}$$?
 
 By "Most likely" we can use different criteria: Maximum Likelihood or Maximum a posteriori probability.
 
