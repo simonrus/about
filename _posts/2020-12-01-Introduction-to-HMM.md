@@ -44,7 +44,7 @@ Our Model: $$\lambda = (A, B, \pi)$$, where:
 
 1. $$A_{ij} = P(S_j \mid S_i)$$ - state transition probability distribution.
 
-2. $$B_{ij} = P(O_j | S_i)$$ - observation symbol probability distribution.
+2. $$B_{ij} = P(O_j \mid S_i)$$ - observation symbol probability distribution.
 
 3. $$\pi = \{P(S_1^{(1)}), P(S_2^{(1)}) ...  P(S_N^{(1)}\}$$ - initial state distribution.
 
