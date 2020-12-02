@@ -1,7 +1,7 @@
 ---
 title: Active-2020-12-01-Introduction-to-HMM
 created: '2020-12-01T07:12:56.473Z'
-modified: '2020-12-02T07:46:46.086Z'
+modified: '2020-12-02T07:51:11.749Z'
 ---
 
 # Active-2020-12-01-Introduction-to-HMM
@@ -45,27 +45,36 @@ The best resource to start with HMMs is the article of L.A. Rabiner “A tutoria
 We will use the same notation as in the article of L.A.Rabiner, namely: 
 
 Possible states: $S = {S_1, S_2...S_N}$
+
 Possible observations: $O = {O_1, O_2, ... O_M}$
+
 Our Model: $\lambda = (A, B, \pi)$, where:
+
 1) $A_{ij} = P(S_j \mid S_i)$ - state transition probability distribution.
+
 2) $B_{ij} = P(O_j | S_i)$ - observation symbol probability distribution.
+
 3) $\pi = \{P(S_1^{(1)}), P(S_2^{(1)}) ...  P(S_N^{(1)}\}$ - initial state distribution.
 
 We can have three main problems
 ## Problem 1: Direct computations
 Q: How do we compute the probability that the observed sequence was produced?
+
 In other words: if we observe $\hat{O} = \{\hat{O_1},\hat{O_2}...\hat{O_L}\}$, what is $P(\hat{O} \mid \lambda)$ ?
 
 A: BCJR Algorithm (Forward Backward Algorithm)
 
 ## Problem 2: Hidden states estimation
 Q: What were sequence $\hat{S} = \hat{S_1},\hat{S_2}...\hat{S_L}$ that could "most likely" produce our sequence $\hat{O}$?
+
 By "Most likely" we can use different criteria: Maximum Likelihood or Maximum a posteriori probability.
 
 A: BCJR Algorithm (Forward Backward Algorithm)
 
 ## Problem 3: HMM training
-Q: How can we train a model so to best describe how given observation sequence comes about? In other words, we may use "observation sequences" to adjust parameters of the HMM ( do "training") to get the best model for real phenomena
+Q: How can we train a model so to best describe how given observation sequence comes about? 
+
+In other words, we may use "observation sequences" to adjust parameters of the HMM ( do "training") to get the best model for real phenomena
 
 A: [EM algorithm (Expected Maximization Algorithm)](https://simonrus.github.io/about/learning/PGM-ExpectedMaximization.html)
 
