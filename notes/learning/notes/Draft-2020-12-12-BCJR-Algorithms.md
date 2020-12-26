@@ -1,7 +1,7 @@
 ---
 title: Draft-2020-12-12-BCJR-Algorithms
 created: '2020-11-30T08:19:27.713Z'
-modified: '2020-12-23T12:24:10.681Z'
+modified: '2020-12-26T20:30:08.185Z'
 ---
 
 # Draft-2020-12-12-BCJR-Algorithms
@@ -85,10 +85,11 @@ $$\beta_{t}(i) =
 $$
 4. Last step:
 $$\beta_{0}(i) = 
-\sum_{j =1} \beta_{1}(j) \cdot P(S_{j} | S_{i}) \cdot P(O^{1} \mid S_{j}) 
+\sum_{j =1} \beta_{1}(j) \cdot \pi(S_{j}) \cdot P(O^{1} \mid S_{j}) 
 $$
 
-It can be seen, that $$\beta_{1}(i) \cdot \pi(S_i) = \alpha_{L} (i)$$
+What does a variable $\beta_{t}(i)$ mean? It is 
+$$\beta_{t}(i) = P(S^{(t)} = i, O^{(t+1)}, O^{(t+2)}...O^{(L)})$$
 
 
 
