@@ -17,11 +17,13 @@ $$\beta_{i}\left(\boldsymbol{C}_{i}\right)=\psi_{i} \times \prod_{k \in \mathcal
 
 There is a theorem, that convergence leads to calibration:
 
-$$\sum_{C_{i}-S_{i, j}} \beta_{i}\left(C_{i}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$ 
+$$\sum_{C_{i}-S_{i, j}} \beta_{i}\left(C_{i}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$
 
 Calibration property implies that product of messages on both sides of the link is the marginal over the cluster beliefs:
 
-$$\delta_{j \rightarrow i}\left(S_{i, j}\right) \delta_{i \rightarrow j}\left(S_{i, j}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$
+$$\mu_{i, j}\left(S_{i, j}\right)= \delta_{j \rightarrow i}\left(S_{i, j}\right) \delta_{i \rightarrow j}\left(S_{i, j}\right)=\sum_{C_{j}-S_{i, j}} \beta_{j}\left(C_{j}\right)$$
+
+The $$\mu_{i, j}$$ is called as "Sepset belief".
 
 BTW If we multiply beliefs over all clusters and divide it to all messages, we can get unnormalized joint distribution:
 
@@ -51,10 +53,14 @@ If we have caching, it can be cheap, because we can recalculate only messages th
 
 Reference: [And more queries](https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/lecture/Jm0AM/clique-tree-algorithm-computation)
 
+# References 
+1. [https://www.coursera.org/lecture/probabilistic-graphical-models-2-inference/properties-of-belief-propagation-xm2ul](https://www.coursera.org/lecture/probabilistic-graphical-models-2-inference/properties-of-belief-propagation-xm2ul)
+2. [https://courses.cs.washington.edu/courses/cse515/11sp/class8-beliefprop-learning.pdf](https://courses.cs.washington.edu/courses/cse515/11sp/class8-beliefprop-learning.pdf)
+
 *Cool, isn't it?*
 
 
 
 
 
-*Last update:30 November 2020*
+*Last update:13 December 2020*
