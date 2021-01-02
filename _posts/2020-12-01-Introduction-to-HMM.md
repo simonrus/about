@@ -2,7 +2,7 @@
 layout: post
 title: "Introduction to Hidden Markov Models"
 author: "Sergei Semenov"
-categories: learning
+categories: learning fec
 image: 2020-07-PGM_Logo.jpg
 ---
 
@@ -81,4 +81,4 @@ A: [EM algorithm (Expected Maximization Algorithm)](https://simonrus.github.io/a
 
 
 
-*Last update:02 December 2020*
+*Last update:02 January 2021*

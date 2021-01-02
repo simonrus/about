@@ -1,7 +1,7 @@
 ---
 title: Active-2020-12-01-Introduction-to-HMM
 created: '2020-12-01T07:12:56.473Z'
-modified: '2020-12-02T19:39:43.399Z'
+modified: '2021-01-02T13:31:16.633Z'
 ---
 
 # Active-2020-12-01-Introduction-to-HMM
@@ -10,7 +10,7 @@ modified: '2020-12-02T19:39:43.399Z'
 layout: post
 title: "Introduction to Hidden Markov Models"
 author: "Sergei Semenov"
-categories: learning
+categories: learning fec
 image: 2020-07-PGM_Logo.jpg
 ---
 
