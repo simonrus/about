@@ -1,7 +1,7 @@
 ---
 title: Active-2020-12-12-BCJR-Algorithm_p1
 created: '2020-11-30T08:19:27.713Z'
-modified: '2021-01-02T13:31:28.740Z'
+modified: '2021-01-02T13:33:05.000Z'
 ---
 
 # Active-2020-12-12-BCJR-Algorithm_p1
@@ -12,7 +12,7 @@ layout: post
 title: "BCJR Algorithm (Part 1)"
 author: "Sergei Semenov"
 categories: learning fec
-image: 2020-07-PGM_Logo.jpg
+image: 2020-12_BCJR_Trellis_Alphas.svg
 ---
 
 # Sum-Product 

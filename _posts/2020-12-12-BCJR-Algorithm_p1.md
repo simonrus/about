@@ -3,7 +3,7 @@ layout: post
 title: "BCJR Algorithm (Part 1)"
 author: "Sergei Semenov"
 categories: learning fec
-image: 2020-07-PGM_Logo.jpg
+image: 2020-12_BCJR_Trellis_Alphas.svg
 ---
 
 # Sum-Product 
