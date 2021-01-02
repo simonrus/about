@@ -1,7 +1,7 @@
 ---
 title: Active-2020-12-12-BCJR-Algorithm_p1
 created: '2020-11-30T08:19:27.713Z'
-modified: '2021-01-02T13:33:05.000Z'
+modified: '2021-01-02T13:38:57.397Z'
 ---
 
 # Active-2020-12-12-BCJR-Algorithm_p1
@@ -20,15 +20,14 @@ In the post ["Introduction to Hidden Markov Models"](https://simonrus.github.io/
 $$P(O^1,O^2...O^L \mid \lambda)$$
 
 _"If you don't know what to do, start with joint distribution"_ (c) Mackey. But we don't know hidden state values $S^{1}, S^{2} ... S^{L}$ at time moments t=$1,2 ... L$. Let's introduce them like as they are marginalized out:
-$$P(O^1,O^2...O^L) = 
-\sum_{{S^{1}},{S^{2}},...,{S^{L}}}P({S^{1}},{S^{2}},...,{S^{L}}, O^1,O^2,...,O^L)$$
+$$P(O^1,O^2...O^L) = \sum_{S^1,S^2,...,S^L} P(S^1,S^2,...,S^L, O^1,O^2,...,O^L)$$
 
 It can be easily seen, that above equation computes the sum over all possible states and has the complexity is $O(L \cdot N^{L})$. 
 
 Now we can apply the distributive property and chain-rule as follows:
-$$ \sum_{{S^{1}},{S^{2}},...,{S^{L}}}P({S^{1}},{S^{2}},...,{S^{L}}, O^1,O^2,...,O^L) = \\
-= \sum_{{S^{1}},{S^{2}}, ..., {S^{L}}}P({S^{1}})P(O^1\mid{S^{1}}) P({S^{2} \mid S^{1}})P(O^2\mid{S^{2}})...P({S^{L} \mid S^{L-1}})P(O^L\mid{S^{L}}) ) = \\
-= \sum_{S^{1}}\pi({S^{1}})P(O^1\mid{S^{1}}) \cdot \sum_{S^{2}} P({S^{2} \mid S^{1}})P(O^2\mid{S^{2}}) \cdot ... \cdot \\ \sum_{S^{L-1}}P({S^{L-1} \mid S^{L-2}})P(O^{L-1}\mid{S^{L-1}}) \cdot  \sum_{S^{L}}P({S^{L} \mid S^{L-1}})P(O^L\mid{S^{L}})$$
+$$\sum_{S^1,S^2,...,S^L}P(S^1,S^2,...,S^L, O^1,O^2,...,O^L) = \\
+= \sum_{S^1,S^2, ..., S^L}P(S^1)P(O^1 \mid S^1 ) P(S^2 \mid S^1) P(O^2 \mid S^2)...P(S^L \mid S^{L-1})P(O^L \mid S^L) ) = \\
+= \sum_{S^1}\pi(S^1)P(O^1 \mid S^1) \cdot \sum_S^2 P(S^2 \mid S^1)P(O^2 \mid S^2) \cdot ... \cdot \\ \sum_{S^{L-1}}P(S^{L-1} \mid S^{L-2})P(O^{L-1} \mid S^{L-1}) \cdot  \sum_{S^L}P(S^{L} \mid S^{L-1})P(O^L \mid S^{L})$$
 
 The equation above is written in the untypical form and introduces the following new variables:
 1. $S^{t}$ - is a possible hidden state at time $t$.
