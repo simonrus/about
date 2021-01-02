@@ -1,7 +1,7 @@
 ---
 title: Active-2020-12-12-BCJR-Algorithm_p1
 created: '2021-01-02T14:43:50.762Z'
-modified: '2021-01-02T14:44:10.576Z'
+modified: '2021-01-02T14:49:40.857Z'
 ---
 
 # Active-2020-12-12-BCJR-Algorithm_p1
@@ -28,7 +28,7 @@ $$\sum\limits_{S^1,S^2,...,S^L}P(S^1,S^2,...,S^L, O^1,O^2,...,O^L) = \\
 = \sum\limits_{S^1,S^2, ..., S^L}P(S^1)P(O^1 \mid S^1 ) P(S^2 \mid S^1) P(O^2 \mid S^2)...P(S^L \mid S^{L-1})P(O^L \mid S^L) ) = \\
 = \sum\limits_{S^1}\pi(S^1)P(O^1 \mid S^1) \cdot \sum\limits_S^2 P(S^2 \mid S^1)P(O^2 \mid S^2) \cdot ... \cdot \\ \sum\limits_{S^{L-1}}P(S^{L-1} \mid S^{L-2})P(O^{L-1} \mid S^{L-1}) \cdot  \sum\limits_{S^L}P(S^{L} \mid S^{L-1})P(O^L \mid S^{L})$$
 
-The equation above is written in the untypical form and introduces the following new variables:
+The equation above is written in an untypical form and introduces the following new variables:
 1. $S^{t}$ - is a possible hidden state at time $t$.
 2. $S_t$ - is a choosen state at time $t$ (will be used later). 
 
@@ -66,7 +66,7 @@ $$
 What does a variable $\alpha_{t}(i)$ mean? One can take a look at equation (2) and notice, that it $\alpha_{t}(i) = P(O^1,O^2,...,{O^t}, S^{t} = S_{i})$. Or in other words: it is the probability of the joint event that sequence $O^1,O^2,...,{O^t}$ is observed and state $S_{i}$ is reached at time $t$.
 
 ## Backward step
-Can we move in trellis from left to right? No problem! Let's refer to equation (2) again and do the following:
+Can we do calculations in the trellis from left to right? No problem! Let's refer to equation (2) again and do the following:
 
 1. Step 1: $\beta_{L}(i)=1$
 2. Step 2: 
@@ -83,7 +83,7 @@ $$
 $$\beta_{t}(i) =
 \sum\limits_{j =1} \beta_{t+1}(j) \cdot P(S_{j} \mid S_{i}) \cdot P(O^{t+1} \mid S_{j}) 
 $$
-4. Last step (the represenation differs nows, because all paths start in the same point):
+4. Last step (the represenation is different, because all paths start in the same point):
 $$\beta_{0} = 
 \sum\limits_{j =1} \beta_{1}(j) \cdot \pi(S_{j}) \cdot P(O^{1} \mid S_{j}) 
 $$
@@ -97,13 +97,14 @@ $$
 =\sum\limits_{j =1} P(O^L \mid S^{L-1} = S_{j}) \cdot P(S^{L-1} = S_{j} \mid S^{L-2} = S_{i})\cdot P(O^{L-1}\mid S^{L-1} = S_{j} )=\\
 = \sum\limits_{j =1} P(O^{L-1}, O^L \mid S^{L-1} = S_{j}) \cdot P(S^{L-1} = S_{j} \mid S^ {L-2} = S_{i})=\\
 =P(O^{L-1}, O^L \mid S^{L-2} = S_{i})$$
-In general case:
+
+In a general case we have :
 $$\beta_{t}(i) = P(O^{t+1}, O^{t+2}...O^{L} \mid S^{t} = S_{i})$$
 
 # Solution for the  first problem
 Now we have two options to solve first problem with complexity $O(L \cdot N^2)$:
-1.Using Forward steps: $$P(O^1,O^2...O^L \mid \lambda) = \sum\limits_{i}\alpha_{L}(i)$$ 
-2.Using Backward steps: $$P(O^1,O^2...O^L \mid \lambda) = \beta_{0} = \sum\limits_{j=1} \beta_{1}(j) \cdot \pi(S_{j}) \cdot P(O^{1} \mid S_{j})$$
+1. Using Forward steps: $$P(O^1,O^2...O^L \mid \lambda) = \sum\limits_{i}\alpha_{L}(i)$$ 
+2. Using Backward steps: $$P(O^1,O^2...O^L \mid \lambda) = \beta_{0} = \sum\limits_{j=1} \beta_{1}(j) \cdot \pi(S_{j}) \cdot P(O^{1} \mid S_{j})$$
 
 
 # Why Forward and Backward?
