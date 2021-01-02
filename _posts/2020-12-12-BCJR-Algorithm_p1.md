@@ -18,8 +18,8 @@ It can be easily seen, that above equation computes the sum over all possible st
 
 Now we can apply the distributive property and chain-rule as follows:
 $$ \sum_{{S^{1}},{S^{2}},...,{S^{L}}}P({S^{1}},{S^{2}},...,{S^{L}}, O^1,O^2,...,O^L) = \\
-= \sum_{{S^{1}},{S^{2}}, ..., {S^{L}}}P({S^{1}})P(O^1\mid{S^{1}}) P({S^{2} | S^{1}})P(O^2\mid{S^{2}})...P({S^{L} | S^{L-1}})P(O^L\mid{S^{L}}) ) = \\
-= \sum_{S^{1}}\pi({S^{1}})P(O^1\mid{S^{1}}) \cdot \sum_{S^{2}} P({S^{2} | S^{1}})P(O^2\mid{S^{2}}) \cdot ... \cdot \\ \sum_{S^{L-1}}P({S^{L-1} | S^{L-2}})P(O^{L-1}\mid{S^{L-1}}) \cdot  \sum_{S^{L}}P({S^{L} | S^{L-1}})P(O^L\mid{S^{L}}) \tag{2}$$
+= \sum_{{S^{1}},{S^{2}}, ..., {S^{L}}}P({S^{1}})P(O^1\mid{S^{1}}) P({S^{2} \mid S^{1}})P(O^2\mid{S^{2}})...P({S^{L} \mid S^{L-1}})P(O^L\mid{S^{L}}) ) = \\
+= \sum_{S^{1}}\pi({S^{1}})P(O^1\mid{S^{1}}) \cdot \sum_{S^{2}} P({S^{2} \mid S^{1}})P(O^2\mid{S^{2}}) \cdot ... \cdot \\ \sum_{S^{L-1}}P({S^{L-1} \mid S^{L-2}})P(O^{L-1}\mid{S^{L-1}}) \cdot  \sum_{S^{L}}P({S^{L} \mid S^{L-1}})P(O^L\mid{S^{L}}) \tag{2}$$
 
 The equation above is written in the untypical form and introduces the following new variables:
 1. $$S^{t}$$ - is a possible hidden state at time $$t$$.
@@ -31,7 +31,7 @@ The final result can be calculated as the product of sums and has lower complexi
 Now we can represents the computations above as a trellis:
 ![full graph](https://simonrus.github.io/about/assets/img/2020-12_BCJR_Trellis.svg "Graph"){:height="80%" width="80%"}
 
-Edges represent a state transitions probability  $$P(S^{t+1} = i | S^{t} = j) = P(S_{i} | S_{j}) = A_{ji}$$ and nodes represent an observation probability $$P(O^t=i\mid{S^{t}=j}) = P(O_i \mid {S_{j}}) = B_{ji}$$.
+Edges represent a state transitions probability  $$P(S^{t+1} = i \mid S^{t} = j) = P(S_{i} \mid S_{j}) = A_{ji}$$ and nodes represent an observation probability $$P(O^t=i\mid{S^{t}=j}) = P(O_i \mid {S_{j}}) = B_{ji}$$.
 
 The equation (1) computes the sum over **all possible paths** in the trellis.  
 
@@ -46,8 +46,8 @@ We evaluate the whole trellis by consequently calculating the product-sums that 
 Our algorithm consists of the folowing steps:
 1. Step 1: $$\alpha_{1}(i)= P(S^{1} = S_{i}) \cdot P(O^{1} \mid S^{1} = S_{i} ) =\\= \pi(S_{i}) \cdot P(O^{1} \mid S_{i} )$$
 2. Step 2: 
-$$\alpha_{2}(i)=\left[ \sum_{j =1} \alpha_{1}(j) \cdot P(S^{2} = S_{i} | S^{1} = S_{j}) \right] \cdot P(O^{2} \mid S^{2} = S_{i})=\\=
-\left[ \sum_{j =1} \alpha_{1}(j) \cdot P(S_{i} | S_{j}) \right] \cdot P({O^{2}} \mid S_{i}) 
+$$\alpha_{2}(i)=\left[ \sum_{j =1} \alpha_{1}(j) \cdot P(S^{2} = S_{i} \mid S^{1} = S_{j}) \right] \cdot P(O^{2} \mid S^{2} = S_{i})=\\=
+\left[ \sum_{j =1} \alpha_{1}(j) \cdot P(S_{i} \mid S_{j}) \right] \cdot P({O^{2}} \mid S_{i}) 
 $$
 2. Step $$t+1$$:
 $$\alpha_{t+1}(i)=\left[ \sum_{j =1} \alpha_{t}(j) \cdot P(S^{t+1} = S_{i} \mid S^{t} = S_{j}) \right] \cdot P({O^{t+1}} \mid S^{t+1} = S_{i})=\\=
@@ -91,7 +91,7 @@ $$
 = \sum_{j =1} P(O^{L-1}, O^L \mid S^{L-1} = S_{j}) \cdot P(S^{L-1} = S_{j} \mid S^ {L-2} = S_{i})=\\
 =P(O^{L-1}, O^L \mid S^{L-2} = S_{i})$$
 In general case:
-$$\beta_{t}(i) = P(O^{t+1}, O^{t+2}...O^{L}|S^{t} = S_{i})$$
+$$\beta_{t}(i) = P(O^{t+1}, O^{t+2}...O^{L} \mid S^{t} = S_{i})$$
 
 # Solution for the  first problem
 Now we have two options to solve first problem:
