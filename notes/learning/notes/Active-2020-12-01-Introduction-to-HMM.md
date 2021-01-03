@@ -1,7 +1,7 @@
 ---
 title: Active-2020-12-01-Introduction-to-HMM
 created: '2020-12-01T07:12:56.473Z'
-modified: '2021-01-02T13:31:16.633Z'
+modified: '2021-01-03T14:30:25.624Z'
 ---
 
 # Active-2020-12-01-Introduction-to-HMM
@@ -62,14 +62,14 @@ Q: How do we compute the probability that the observed sequence was produced?
 
 In other words: if we observe $\hat{O} = \{\hat{O_1},\hat{O_2}...\hat{O_L}\}$, what is $P(\hat{O} \mid \lambda)$ ?
 
-A: BCJR Algorithm (Forward Backward Algorithm)
+A:  [Forward Backward Algorithm as a part of BCJR ](https://simonrus.github.io/about/learning/fec/BCJR-Algorithm_p1.html)
 
 ## Problem 2: Hidden states estimation
 Q: What is sequence $\hat{S} = \hat{S_1},\hat{S_2}...\hat{S_L}$ that could "most likely" produce our sequence $\hat{O}$?
 
 By "Most likely" we can use different criteria: Maximum Likelihood or Maximum a posteriori probability.
 
-A: BCJR Algorithm (Forward Backward Algorithm)
+A: [BCJR Algorithm](https://simonrus.github.io/about/learning/fec/BCJR-Algorithm_p2.html)
 
 ## Problem 3: HMM training
 Q: How can we train a model so to best describe how given observation sequence comes about? 
