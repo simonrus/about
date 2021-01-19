@@ -92,6 +92,11 @@ $$
 
 In a general case we have :
 $$\beta_{t}(i) = P(O^{t+1}, O^{t+2}...O^{L} \mid S^{t} = S_{i})$$
+or using conditional probability definition:
+$$\beta_{t}(i) = \frac{P(O^{t+1}, O^{t+2}...O^{L}, S^{t} = S_{i})}{P(S^{t} = S_{i})}$$
+or in a form, where hidden states starting from timepoint $$t+1$$ are marginalized out:
+$$\beta_{t}(i) = \frac{\sum\limits_{S^{t+1}, S^{t+2}...S^{L}}P(O^{t+1}, O^{t+2}...O^{L}, S^{t} = S_{i})}{ P(S^{t} = S_{i})}$$
+
 
 # Solution for the  first problem
 Now we have two options to solve first problem with complexity $$O(L \cdot N^2)$$:
@@ -109,4 +114,4 @@ Answer: Forward and Backward steps can help us to answer more complicated querie
 
 
 
-*Last update:02 January 2021*
+*Last update:19 January 2021*
