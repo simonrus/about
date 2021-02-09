@@ -97,7 +97,7 @@ for root,d_names,f_names in os.walk(path):
         
         for post_fn in f_names:
             ## Find all with name Active...dd
-            print(root, post_fn, f_names)
+            #print(root, post_fn, f_names)
             if ((post_fn.startswith(magic_prefix)) and (".bak" not in post_fn)):
                 #print (root, post_fn)
                 new_filename = post_fn[len(magic_prefix):]
