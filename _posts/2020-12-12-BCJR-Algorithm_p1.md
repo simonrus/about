@@ -102,7 +102,7 @@ $$\beta_{t}(i) = \frac{\sum\limits_{S^{t+1}, S^{t+2}...S^{L}}P(O^{t+1}, O^{t+2}.
 Now we have two options to solve first problem with complexity $$O(L \cdot N^2)$$:
 1. Using Forward steps: $$P(O^1,O^2...O^L \mid \lambda) = \sum\limits_{i}\alpha_{L}(i)$$ 
 2. Using Backward steps: $$P(O^1,O^2...O^L \mid \lambda) = \beta_{0} = \sum\limits_{j=1} \beta_{1}(j) \cdot \pi(S_{j}) \cdot P(O^{1} \mid S_{j})$$
-
+3. Using Forward and backward steps together: $$P(O^1, O^2 .. O^L\mid \lambda) =   \sum\limits_{i} P(O^1, O^2 .. O^L, S_t = i) = \sum\limits_{i} \frac{P( S_t = i\mid O^1, O^2 .. O^L)}{P(O^1, O^2 .. O^L)} = \sum\limits_{i} \alpha_{t}(i) \beta_{t}(i)$$
 
 # Why Forward and Backward?
 Answer: Forward and Backward steps can help us to answer more complicated queries. Stay tuned!
@@ -114,4 +114,4 @@ Answer: Forward and Backward steps can help us to answer more complicated querie
 
 
 
-*Last update:19 January 2021*
+*Last update:19 February 2021*
