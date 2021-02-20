@@ -531,7 +531,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -621,12 +621,12 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="42.915413"
-       y="73.10318"
+       y="62.519836"
        id="text912-2-97-9"><tspan
          sodipodi:role="line"
          id="tspan910-4-3-0"
          x="42.915413"
-         y="73.10318"
+         y="62.519836"
          style="font-size:5.30201769px;stroke-width:0.49706414">1</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.4978469;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-9-9-6)"
@@ -673,12 +673,12 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="107.27232"
-       y="73.13813"
+       y="62.554787"
        id="text912-2-4-9"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7"
          x="107.27232"
-         y="73.13813"
+         y="62.554787"
          style="font-size:5.30201769px;stroke-width:0.49706414">t-2</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.4978469;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-9-1-2)"
@@ -766,12 +766,12 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="242.27826"
-       y="73.10318"
+       y="62.519836"
        id="text912-2-97-9-6"><tspan
          sodipodi:role="line"
          id="tspan910-4-3-0-3"
          x="242.27826"
-         y="73.10318"
+         y="62.519836"
          style="font-size:5.30201769px;stroke-width:0.49706414">t+1</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.4978469;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-9-9-6-3)"
@@ -818,12 +818,12 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="310.86862"
-       y="73.10318"
+       y="62.519836"
        id="text912-2-4-9-8"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-4"
          x="310.86862"
-         y="73.10318"
+         y="62.519836"
          style="font-size:5.30201769px;stroke-width:0.49706414">L</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.4978469;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend-9-1-2-2)"
@@ -834,89 +834,89 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="19.965059"
-       y="25.247469"
+       y="16.251627"
        id="text912-2-97-9-1"><tspan
          sodipodi:role="line"
          id="tspan910-4-3-0-0"
          x="19.965059"
-         y="25.247469"
+         y="16.251627"
          style="font-size:5.30201769px;stroke-width:0.49706414">1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="85.530327"
-       y="25.282419"
+       y="16.286577"
        id="text912-2-4-9-3"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-0"
          x="85.530327"
-         y="25.282419"
+         y="16.286577"
          style="font-size:5.30201769px;stroke-width:0.49706414">t-2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="119.75829"
-       y="25.247469"
+       y="16.251627"
        id="text912-2-4-9-4"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-44"
          x="119.75829"
-         y="25.247469"
+         y="16.251627"
          style="font-size:5.30201769px;stroke-width:0.49706414">t-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="143.24977"
-       y="73.10318"
+       y="62.519836"
        id="text912-2-4-9-4-4"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-44-7"
          x="143.24977"
-         y="73.10318"
+         y="62.519836"
          style="font-size:5.30201769px;stroke-width:0.49706414">t-1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="187.84076"
-       y="25.176275"
+       y="16.180433"
        id="text912-2-4-9-4-6"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-44-3"
          x="187.84076"
-         y="25.176275"
+         y="16.180433"
          style="font-size:5.30201769px;stroke-width:0.49706414">t</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="211.1498"
-       y="73.031982"
+       y="62.448639"
        id="text912-2-4-9-4-6-1"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-44-3-7"
          x="211.1498"
-         y="73.031982"
+         y="62.448639"
          style="font-size:5.30201769px;stroke-width:0.49706414">t</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="218.81711"
-       y="24.508097"
+       y="15.512256"
        id="text912-2-4-9-4-6-5"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-44-3-9"
          x="218.81711"
-         y="24.508097"
+         y="15.512256"
          style="font-size:5.30201769px;stroke-width:0.49706414">t+1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:19.88256645px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.49706414"
        x="288.66339"
-       y="25.247469"
+       y="16.251627"
        id="text912-2-4-9-4-6-6"><tspan
          sodipodi:role="line"
          id="tspan910-4-5-7-44-3-2"
          x="288.66339"
-         y="25.247469"
+         y="16.251627"
          style="font-size:5.30201769px;stroke-width:0.49706414">L</tspan></text>
     <flowRoot
        xml:space="preserve"
@@ -928,7 +928,7 @@
            height="27.779196"
            x="1190.9698"
            y="309.60318" /></flowRegion><flowPara
-         id="flowPara2702"></flowPara></flowRoot>    <path
+         id="flowPara2702" /></flowRoot>    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-mid:url(#marker4055-8);marker-end:url(#marker4049-6)"
        d="m 130.36269,18.515865 38.43269,-0.188988"
        id="path3780-3"

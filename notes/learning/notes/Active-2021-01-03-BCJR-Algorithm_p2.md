@@ -1,7 +1,7 @@
 ---
 title: Active-2021-01-03-BCJR-Algorithm_p2
 created: '2021-01-03T09:19:05.796Z'
-modified: '2021-02-19T20:42:19.979Z'
+modified: '2021-02-20T11:59:43.005Z'
 ---
 
 # Active-2021-01-03-BCJR-Algorithm_p2
@@ -21,7 +21,7 @@ In this post we would like to provide solution for the second HMM problem, namel
 
 This problem is also known as hidden states estimation.
 
-# Hidden states estimation solution (ML way)
+# Hidden states estimation
 First, we may use Bayes' theorem to estimate the hidden state at moment $t$ given our observed sequence $O$. Taken into account, that $(O^1...O^{t-1} \perp O^{t} \perp O^{t+1}...O^{L} \mid S^{t})$, we may write:
 $$
 P(S^t = i \mid O^1, O^2,...,O^L) = \\
@@ -31,23 +31,21 @@ P(S^t = i \mid O^1, O^2,...,O^L) = \\
 = \frac{\alpha_{t}(i)\beta_{t}(i)}{\sum\limits_{i} \alpha_{t}(i) \beta_{t}(i)}
 $$
 
-# Hidden transitions estimation solution (ML way)
-If we decode an error-correcting code using its trellis representation, we are interested to estimate the transition probability between two consecutive hidden states, since it represents bits of codeword.
-
-Taking 
+# Hidden transitions estimation 
+If we want to decode an error-correcting code using its trellis representation, we are interested in estimating a transition probability between two consecutive hidden states, since it represents bits of codeword:
 $$P(S^{t-1} = i, S^t = j \mid O^1, O^2,...,O^L) = \\ \frac{P(O^1, O^2,...,O^{L} \mid S^{t-1} = i, S^t = j) \cdot P(S^{t-1} = i, S^t = j )}{P(O^1,O^2,...,O^L)}
 $$
 
+Let's explore conditional independencies in a given HMM:
+![full graph](https://simonrus.github.io/about/assets/img/2021-01-03-HMM.svg "Graph"){:height="80%" width="80%"}
 
-In a case of HMM, the following dependencies are met (we still use $\perp$ symbol instead of $\perp \!\!\! \perp$ just for simplicity):
+We have following independecies (we still use $\perp$ symbol instead of $\perp \!\!\! \perp$ just for simplicity):
 1. $O^1, O^2,...,O^{t-2} \perp O^{t-1} \mid S^{t-1}$
 2. $O^{t-1} \perp S^{t} \mid S^{t-1}$
 3. $O^{t} \perp S^{t-1} \mid S^{t}$
 4. $O^{t} \perp S^{t+1} \mid S^{t}$
 
-![full graph](https://simonrus.github.io/about/assets/img/2021-01-03-HMM.svg "Graph"){:height="80%" width="80%"}
-
-It allows us to represent nominator as :
+Now we can rewrite nominator as:
 $$\begin{aligned}  P&(O^1,  O^2,...,O^{L} \mid S^{t-1} = i, S^t = j) \cdot P(S^{t-1} = i, S^t = j ) = \\ =  & P(O^1, O^2,...,O^{t-2} \mid S^{t-1} = i, S^t = j) \cdot  P(O^{t-1} \mid S^{t-1} = i, S^t = j)\cdot \\ \cdot & P(O^{t} \mid S^{t-1} = i, S^t = j)\cdot P(O^{t+1},...,O^{L} \mid S^{t-1} = i, S^t = j) \cdot  P(S^{t-1} = i, S^t = j )= \\ =  & P(O^1, O^2,...,O^{t-2}, O^{t-1} \mid S^{t-1} = i)\cdot \\ \cdot & P(O^{t} \mid S^t = j)\cdot P(O^{t+1},...,O^{L} \mid S^t = j) \cdot  P(S^{t-1} = i) P(S^t = j \mid S^{t-1} = i)= \\ = & \alpha_{t-1}(i)  \cdot \beta_{t}(j) \cdot \omega_{i,j} \end{aligned}$$, where $\omega_{i,j} = P(O^{t} \mid S^t = j) P(S^t = j \mid S^{t-1} = i) = B_{j,O_t} A_{j, i}$
 
 Finally, we have:
