@@ -1,17 +1,17 @@
 ---
-title: Active-2020-12-12-BCJR-Algorithm_p1
+title: Active-2020-12-12-ForwardBackward-Algorithm_p1
 created: '2021-01-02T14:43:50.762Z'
-modified: '2021-02-19T07:45:18.314Z'
+modified: '2021-03-10T06:42:10.649Z'
 ---
 
-# Active-2020-12-12-BCJR-Algorithm_p1
+# Active-2020-12-12-ForwardBackward-Algorithm_p1
 
 ---
 layout: post
-title: "BCJR Algorithm (Part 1)"
+title: "ForwardBackward Algorithm (Part 1)"
 author: "Sergei Semenov"
 categories: learning fec
-image: 2020-12_BCJR_Trellis_Alphas.svg
+image: 2020-12_HMM_Trellis_Alphas.svg
 ---
 
 # Sum-Product 
@@ -36,7 +36,7 @@ The final result can be calculated as the product of sums and has lower complexi
 
 # Trellis represenation
 Now we can represents the computations above as a trellis:
-![full graph](https://simonrus.github.io/about/assets/img/2020-12_BCJR_Trellis.svg "Graph"){:height="80%" width="80%"}
+![full graph](https://simonrus.github.io/about/assets/img/2020-12_HMM_Trellis.svg "Graph"){:height="80%" width="80%"}
 
 Edges represent a state transitions probability  $P(S^{t+1} = i \mid S^{t} = j) = P(S_{i} \mid S_{j}) = A_{ji}$ and nodes represent an observation probability $P(O^t=i\mid{S^{t}=j}) = P(O_i \mid {S_{j}}) = B_{ji}$.
 
@@ -48,7 +48,7 @@ The equation (2) does calculations in a  sum-product manner, where we extend ste
 ## Forward step in a trellis
 We evaluate the whole trellis by consequently calculating the product-sums that correspond in the begging to the left (initial) section and with next steps is extended to the more and more sections, until we reach the right (end) section. We store all intermidiate results in $\alpha_{t}(i)$ variables ($t$ - time, $i$ - current state),
 
-![full graph with alphas](https://simonrus.github.io/about/assets/img/2020-12_BCJR_Trellis_Alphas.svg "Graph")
+![full graph with alphas](https://simonrus.github.io/about/assets/img/2020-12_HMM_Trellis_Alphas.svg "Graph")
 
 Our algorithm consists of the folowing steps:
 1. Step 1: $\alpha_{1}(i)= P(S^{1} = S_{i}) \cdot P(O^{1} \mid S^{1} = S_{i} ) =\\= \pi(S_{i}) \cdot P(O^{1} \mid S_{i} )$

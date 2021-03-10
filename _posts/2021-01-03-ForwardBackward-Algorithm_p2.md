@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "BCJR Algorithm (Part 2)"
+title: "ForwardBackward Algorithm (Part 2)"
 author: "Sergei Semenov"
 categories: learning fec
-image: 2020-12_BCJR_Trellis_Alphas.svg
+image: 2020-12_HMM_Trellis_Alphas.svg
 ---
 
 # Introduction
-[Previously](https://simonrus.github.io/about/learning/fec/BCJR-Algorithm_p1.html) we introduced Forward and Backward procedure and solved the first HMM problem. We also stated, that $$\alpha_t(i)$$ and $$\beta_t(i)$$ can help us in answering more complicated queries. 
+[Previously](https://simonrus.github.io/about/learning/fec/ForwardBackward-Algorithm_p1.html) we introduced Forward and Backward procedure and solved the first HMM problem. We also stated, that $$\alpha_t(i)$$ and $$\beta_t(i)$$ can help us in answering more complicated queries. 
 
 In this post we would like to provide solution for the second HMM problem, namely: __What is sequence $$S = {S^1},{S^2}...{S^L}$$ that could "most likely" produce our sequence $$O = {O^1},{O^2}...{O^L}$$?__ 
 
@@ -46,11 +46,10 @@ $$P(S^{t-1} = i, S^t = j \mid O^1, O^2,...,O^L) =\frac{\alpha_{t-1}(i)  \cdot \b
 Simple and beautiful, right?
 # References 
 1. L. R. Rabiner, “A tutorial on hidden Markov models and selected applications in speech recognition,” Proc. IEEE, vol. 77, no. 2, pp. 257–286, Feb. 1989, doi: 10.1109/5.18626.
-2. L. Bahl, J. Cocke, F. Jelinek, and J. Raviv, “Optimal decoding of linear codes for minimizing symbol error rate (Corresp.),” IEEE Trans. Inform. Theory, vol. 20, no. 2, pp. 284–287, Mar. 1974, doi: 10.1109/TIT.1974.1055186.
 
 
 
 
 
 
-*Last update:20 February 2021*
+*Last update:10 March 2021*
