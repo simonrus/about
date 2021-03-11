@@ -44,12 +44,15 @@ Finally, we have:
 $$P(S^{t-1} = i, S^t = j \mid O^1, O^2,...,O^L) =\frac{\alpha_{t-1}(i)  \cdot \beta_{t}(j) \cdot \omega_{i,j}}{\sum\limits_{i} \alpha_{t}(i) \beta_{t}(i)}$$
 
 Simple and beautiful, right?
+
 # References 
 1. L. R. Rabiner, “A tutorial on hidden Markov models and selected applications in speech recognition,” Proc. IEEE, vol. 77, no. 2, pp. 257–286, Feb. 1989, doi: 10.1109/5.18626.
+2. B.-J. Yoon, “Hidden Markov Models and their Applications in Biological Sequence Analysis,” CG, vol. 10, no. 6, pp. 402–415, Sep. 2009, doi: 10.2174/138920209789177575.
 
 
 
 
 
 
-*Last update:10 March 2021*
+
+*Last update:11 March 2021*

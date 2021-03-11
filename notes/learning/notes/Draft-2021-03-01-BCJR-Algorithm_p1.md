@@ -1,29 +1,33 @@
 ---
-title: Draft-2021-03-01-BCJR-Algorithm_p3
+title: Draft-2021-03-01-BCJR-Algorithm_p1
 created: '2021-03-01T19:27:35.496Z'
-modified: '2021-03-04T08:01:45.104Z'
+modified: '2021-03-11T07:25:06.516Z'
 ---
 
-# Draft-2021-03-01-BCJR-Algorithm_p3
+# Draft-2021-03-01-BCJR-Algorithm_p1
 
 ---
 layout: post
-title: "BCJR Algorithm (Part 3)"
+title: "BCJR Algorithm (Part 1)"
 author: "Sergei Semenov"
 categories: learning fec
 image: 2021-03-03-BCJR_EmissionsCausedByChannel.svg
 ---
 
 # Introduction
-[Previously](https://simonrus.github.io/about/learning/fec/BCJR-Algorithm_p2.html) we found how to estimate a hidden transition probability between two neighbouring states in a trellis. But how this technique could be applied to turbo codes or, generally speaking, can be used for decoding on a trellis?
 
-# From HMM to decoding on a trellis
+
+
+
+# Decoding on trellis
+
+But how this technique could be applied to turbo codes or, generally speaking, can be used for decoding on a trellis?
+
+# Decoding 
 The transition between states can represent a transmitted symbol (codeword symbol) and emissions can represent received symbols. Now the task of decoding in the following: we need to estimate transmitted symbols (hidden states/state transitions) using our observations - a received sequence. 
 
-The main problem here is the following: TODO HMM->trellis
 
-
-![full graph](https://simonrus.github.io/about/assets/img/2021-03-03-BCJR_EmissionsCausedByChannel.svg "Model"){:height="80%" width="80%"}
+# Decoding on trellis
 
 In the case of hard-decoding, emissions are discrete and the emission probability matrix has a finite number of elements (actually, the $O_t$ is a number of all possible received symbols). But in the case of soft-decoding, emissions and corresponding $B$ matrice are continuous variables. 
 
