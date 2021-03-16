@@ -1,7 +1,7 @@
 ---
 title: Draft-2021-03-01-BCJR-Algorithm_p1
 created: '2021-03-01T19:27:35.496Z'
-modified: '2021-03-11T07:25:06.516Z'
+modified: '2021-03-16T08:14:00.446Z'
 ---
 
 # Draft-2021-03-01-BCJR-Algorithm_p1
@@ -11,20 +11,26 @@ layout: post
 title: "BCJR Algorithm (Part 1)"
 author: "Sergei Semenov"
 categories: learning fec
-image: 2021-03-03-BCJR_EmissionsCausedByChannel.svg
+image: 2021-03-05_TrellisConvCode.png
 ---
 
 # Introduction
 
+The [Forward-Backward algorithm](https://simonrus.github.io/about/learning/fec/ForwardBackward-Algorithm_p2.html) with small modifications can be used for decoding on a trellis. This algorithm is called BCJR and was intoruduced in [1]
+
+# System model
+ Let's take a look again to a trellis ![full graph](https://simonrus.github.io/about/assets/img/2021-03-05_TrellisConvCode.png "Graph"){:height="80%" width="80%"}
+
+The main difference between trellis and HMM is that in HMM the emissions appear only in states.
+But in a trellis, emissions appear during the transitions between states.
+
+![full graph](https://simonrus.github.io/about/assets/img/2021-03-05_Trellis_EmissionModel.png "Trellis Emission Model"){:height="80%" width="80%"}
+
+The transition between states represents codeword symbol(what we transmit) and emissions represent received symbols. 
+
+Now the task of decoding in the following: we need to estimate transmitted symbols (hidden state transitions) using our observations - a received sequence. 
 
 
-
-# Decoding on trellis
-
-But how this technique could be applied to turbo codes or, generally speaking, can be used for decoding on a trellis?
-
-# Decoding 
-The transition between states can represent a transmitted symbol (codeword symbol) and emissions can represent received symbols. Now the task of decoding in the following: we need to estimate transmitted symbols (hidden states/state transitions) using our observations - a received sequence. 
 
 
 # Decoding on trellis
@@ -48,8 +54,7 @@ We can extend the original HMM assumption with following points:
 
 
 # References 
-1. L. R. Rabiner, “A tutorial on hidden Markov models and selected applications in speech recognition,” Proc. IEEE, vol. 77, no. 2, pp. 257–286, Feb. 1989, doi: 10.1109/5.18626.
-2. L. Bahl, J. Cocke, F. Jelinek, and J. Raviv, “Optimal decoding of linear codes for minimizing symbol error rate (Corresp.),” IEEE Trans. Inform. Theory, vol. 20, no. 2, pp. 284–287, Mar. 1974, doi: 10.1109/TIT.1974.1055186.
+1. L. Bahl, J. Cocke, F. Jelinek, and J. Raviv, “Optimal decoding of linear codes for minimizing symbol error rate (Corresp.),” IEEE Trans. Inform. Theory, vol. 20, no. 2, pp. 284–287, Mar. 1974, doi: 10.1109/TIT.1974.1055186.
 
 
 
