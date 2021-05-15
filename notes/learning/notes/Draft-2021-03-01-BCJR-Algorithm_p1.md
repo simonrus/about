@@ -1,7 +1,7 @@
 ---
 title: Draft-2021-03-01-BCJR-Algorithm_p1
 created: '2021-03-01T19:27:35.496Z'
-modified: '2021-03-16T08:14:00.446Z'
+modified: '2021-05-15T09:10:15.040Z'
 ---
 
 # Draft-2021-03-01-BCJR-Algorithm_p1
@@ -16,7 +16,7 @@ image: 2021-03-05_TrellisConvCode.png
 
 # Introduction
 
-The [Forward-Backward algorithm](https://simonrus.github.io/about/learning/fec/ForwardBackward-Algorithm_p2.html) with small modifications can be used for decoding on a trellis. This algorithm is called BCJR and was intoruduced in [1]
+The [Forward-Backward algorithm](https://simonrus.github.io/about/learning/fec/ForwardBackward-Algorithm_p2.html) with small modifications can be used for decoding on a trellis. This algorithm is called BCJR and was introduced in [1]
 
 # System model
  Let's take a look again to a trellis ![full graph](https://simonrus.github.io/about/assets/img/2021-03-05_TrellisConvCode.png "Graph"){:height="80%" width="80%"}

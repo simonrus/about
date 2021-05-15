@@ -8,7 +8,7 @@ image: 2020-12_HMM_Trellis_Alphas.svg
 
 # Applications 
 
-[Previously](https://simonrus.github.io/about/learning/fec/BCJR-Algorithm_p2.html) we found how to estimate a hidden transition probability between two neighbouring states in a HMM. 
+[Previously](https://simonrus.github.io/about/learning/fec/ForwardBackward-Algorithm_p2.html) we found how to estimate a hidden transition probability between two neighbouring states in a HMM. 
 
 Let's show quickly how HMM are used in practice. Our model may look like:
 ![full graph](https://simonrus.github.io/about/assets/img/2021-01-03-HMM_EmissionsModel.svg "Model"){:height="80%" width="80%"}
@@ -36,4 +36,4 @@ The good examples are also:
 
 
 
-*Last update:11 March 2021*
+*Last update:16 March 2021*
