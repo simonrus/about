@@ -24,7 +24,7 @@ P(S^t = i \mid O^1, O^2,...,O^L) = \\
 $$
 
 # Hidden transitions estimation 
-If we want to decode an error-correcting code using its trellis representation, we are interested in estimating a transition probability between two consecutive hidden states, since it represents bits of codeword:
+Also, we may be interested in estimating a transition probability between two consecutive hidden states. We can derive the following equation:
 $$P(S^{t-1} = i, S^t = j \mid O^1, O^2,...,O^L) = \\ \frac{P(O^1, O^2,...,O^{L} \mid S^{t-1} = i, S^t = j) \cdot P(S^{t-1} = i, S^t = j )}{P(O^1,O^2,...,O^L)}
 $$
 
@@ -55,4 +55,4 @@ Simple and beautiful, right?
 
 
 
-*Last update:11 March 2021*
+*Last update:16 May 2021*
